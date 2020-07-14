@@ -1,0 +1,33 @@
+header
+  .container.row
+    .logo
+    nav
+      ul
+        for i in nav
+          li
+            case i.content
+              when 'sản phẩm'
+                a.nav__dropdown=i.content
+                  i.fas.fa-angle-down
+                  .nav__dropdown__icon
+                  .nav__dropdown__content
+                    table(style="width:100%")
+                      tr
+                        for n in listTitle
+                          th=n
+                      for a in dropdown
+                        + customTable(a)
+              default
+                a(href=i.href)=i.content
+    .header__right
+      .header__right__cart.dropdown
+        .dropdown__icon
+        .dropdown__content
+          + customCart(cart)
+          + customCart(cart)
+          .total
+            p.total__title Tổng số
+            p.total__money 240.000
+              sup đ
+          span Giỏ Hàng
+      .header__right__search
