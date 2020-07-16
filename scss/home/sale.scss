@@ -1,0 +1,27 @@
+@import "../mixins";
+
+section.sale {
+  @for $i from 1 to 4 {
+    $item: nth($listSale, $n: $i);
+    .col:nth-child(#{$i}) {
+      margin: 36px 0;
+      width: 33.3333333%;
+      text-align: center;
+      border-right: 1px solid #c2c2c2;
+      .col__icon {
+        @include customBackground($item, 100%, 25px);
+        position: relative;
+        left: 50%;
+        margin-left: -12.5px;
+        margin-bottom: 15px;
+      }
+      p {
+        @include customFont(14px, "openSans");
+      }
+    }
+    .col:nth-child(3) {
+      border: none;
+    }
+  }
+}
+  
