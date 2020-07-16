@@ -1,0 +1,19 @@
+@import "../mixins";
+
+section.navbar {
+  @include customBackground("../../images/image15.jpg", 100%, 170px);
+  .content {
+    display: flex;
+    h1 {
+      @include customFont(74px, "lobster");
+      color: $colorWhite;
+      margin: 40px 25px 0 0;
+    }
+    p {
+      @include customFont(30px, "robotoLight");
+      color: $colorWhite;
+      text-transform: uppercase;
+      margin-top: 45px;
+    }
+  }
+}

@@ -15,6 +15,9 @@
 @include customFontFace(lobster, "../fonts/Lobster-Regular.ttf");
 @include customFontFace(androgyne, "../fonts/UTM Androgyne.ttf");
 @include customFontFace(roboto, "../fonts/Roboto-Regular.ttf");
+@include customFontFace(robotoLight, "../fonts/Roboto-Light.ttf");
+@include customFontFace(robotoMedium, "../fonts/Roboto-Medium.ttf");
+@include customFontFace(robotoSlabLight, "../fonts/RobotoSlab-Light.ttf");
 
 .container {
   width: 60%;

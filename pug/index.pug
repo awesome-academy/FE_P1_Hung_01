@@ -6,18 +6,16 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Madala
-    link(rel="stylesheet", href="../css/style.css")
-    link(rel="stylesheet", href="../../css/style.css")
-    link(rel="stylesheet", href="../css/header.css")
-    link(rel="stylesheet", href="../../css/header.css")
-    link(rel="stylesheet", href="../css/footer.css")
-    link(rel="stylesheet", href="../../css/footer.css")
-    link(rel="stylesheet", href="../css/home/navbar.css")
-    link(rel="stylesheet", href="../css/home/sale.css")
-    link(rel="stylesheet", href="../css/home/content.css")
-    link(rel="stylesheet", href="../css/home/listProducts.css")
-    link(rel="stylesheet", href="../css/home/contact.css")
-    link(rel="stylesheet", href="../fontawesome-free-5.13.0-web/css/all.min.css")
+    block link
+      link(rel="stylesheet", href="../css/style.css")
+      link(rel="stylesheet", href="../css/header.css")
+      link(rel="stylesheet", href="../css/footer.css")
+      link(rel="stylesheet", href="../css/home/navbar.css")
+      link(rel="stylesheet", href="../css/home/sale.css")
+      link(rel="stylesheet", href="../css/home/content.css")
+      link(rel="stylesheet", href="../css/home/listProducts.css")
+      link(rel="stylesheet", href="../css/home/contact.css")
+      link(rel="stylesheet", href="../fontawesome-free-5.13.0-web/css/all.min.css")
   body
     include ./header
     block main
