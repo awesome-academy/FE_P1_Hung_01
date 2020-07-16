@@ -39,6 +39,18 @@
   font-family: roboto;
   src: url("../fonts/Roboto-Regular.ttf");
 }
+@font-face {
+  font-family: robotoLight;
+  src: url("../fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: robotoMedium;
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: robotoSlabLight;
+  src: url("../fonts/RobotoSlab-Light.ttf");
+}
 .container {
   width: 60%;
   margin: auto;

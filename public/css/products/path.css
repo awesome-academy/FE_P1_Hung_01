@@ -1,0 +1,25 @@
+section.path {
+  padding: 20px 0;
+  font-size: 12px;
+  font-family: "openSans";
+}
+section.path span {
+  color: #737373;
+}
+section.path span i {
+  margin: 5px 0 0 5px;
+}
+section.path span i::before {
+  color: #737373;
+}
+section.path span p {
+  display: inline;
+}
+section.path .active {
+  color: #789629;
+}
+section.path .active i::before {
+  color: #789629;
+}
+
+/*# sourceMappingURL=path.css.map */
