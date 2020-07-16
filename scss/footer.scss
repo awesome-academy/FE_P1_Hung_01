@@ -1,0 +1,102 @@
+@import "mixins";
+
+footer {
+  padding: 45px 0 40px 0;
+  background: #050505;
+  color: #d1d1d1;
+  .layout {
+    border-bottom: 1px solid #464646;
+    .row {
+      justify-content: space-between;
+      .contact {
+        width: 32%;
+        h1 {
+          @include customFont(18px, "openSans");
+          text-transform: uppercase;
+          margin-bottom: 25px;
+        }
+        i {
+          padding: 3px 3px;
+          p {
+            @include customFont(14px, "roboto");
+            display: inline-block;
+            color: #464646;
+            transition: 0.5s;
+          }
+        }
+        i::before {
+          display: inline-block;
+          margin: 10px 10px 10px 0;
+          color: $colorGreen;
+        }
+        i:nth-child(4), i:nth-child(6){
+          margin: 10px;
+        }
+        i:nth-child(2) {
+          p {
+            width: 80%;
+            line-height: 3;
+            margin-left: 40px;
+          }
+        }
+        i:nth-child(2)::before {
+          position: absolute;
+        }
+        i:hover {
+          p {
+            color: $colorGreen;
+            transition: 0.5s;
+          }
+        }
+      }
+      .list {
+        width: 16%;
+        h1 {
+          @include customFont(18px, "openSans");
+          text-transform: uppercase;
+          margin-bottom: 25px;
+        }
+        ul {
+          line-height: 3.2;
+          @include customFont(14px, "openSans");
+          color: #464646;
+          transition: 0.5s;
+          li {
+            list-style: none;
+            position: relative;
+          }
+          li::before {
+            content: "";
+            background: $colorGreen;
+            @include customPosition(absolute, 21px, -10px, 999, 3px, 3px, true);
+            opacity: 0;
+            transition: 0.5s;
+          }
+          li:hover {
+            @include customPosition(relative, 0, 10px, 999, 3px, 3px, false);
+            color: $colorGreen;
+            transition: 0.5s;
+          }
+          li:hover::before {
+            opacity: 1;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+  .footer__bottom {
+    p {
+      @include customFont(14px, "openSans");
+      display: inline-block;
+      margin-top: 30px;
+      color: #464646;
+    }
+    &__pay {
+      @include customBackground("../images/image8.png", 280px, 25px);
+      margin-top: 30px;
+      float: right;
+      background-position: center;
+    }
+  }
+}
