@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../css/footer.css"/>
     <link rel="stylesheet" href="../../fontawesome-free-5.13.0-web/css/all.min.css"/>
     <link rel="stylesheet" href="../../css/products/path.css"/>
-    <link rel="stylesheet" href="../../css/cart/shoppingCart.css"/>
+    <link rel="stylesheet" href="../../css/auth/formRegister.css"/>
   </head>
   <body>
     <header>
@@ -109,43 +109,45 @@
         </div>
       </div>
     </header>
-    <section class="path container"><span>Home</span><span> <i class="fas fa-chevron-right"> </i>
-        <p>Sản phẩm</p></span><span class="active"><i class="fas fa-chevron-right"> </i>
-        <p>Trang sức</p></span>
-    </section>
-    <section class="cart container">
-      <h1>Giỏ hàng </h1>
-      <table style="width:100%">
-        <tr>
-          <th>Ảnh</th>
-          <th>Tên sản phẩm</th>
-          <th>Giá</th>
-          <th>Số lượng</th>
-          <th>Tổng số</th>
-          <th>Xóa</th>
-        </tr>
-        <tr> 
-          <td> </td>
-          <td>Lắc tay D&G </td>
-          <td>345.000<sup>đ </sup></td>
-          <td><span>1 </span></td>
-          <td>345.000<sup>đ </sup></td>
-          <td> <i class="fas fa-trash-alt"></i>
-            <h3>355.000đ  </h3>
-          </td>
-        </tr>
-        <tr> 
-          <td> </td>
-          <td>Lắc tay D&G </td>
-          <td>345.000<sup>đ </sup></td>
-          <td><span>1 </span></td>
-          <td>345.000<sup>đ </sup></td>
-          <td> <i class="fas fa-trash-alt"></i>
-            <h3>355.000đ  </h3>
-          </td>
-        </tr>
-      </table>
-      <div class="action"> <a href="#">Tiếp tục mua hàng </a><a href="#">Xóa</a><a href="#">Cập nhật</a></div>
+    <section class="path container"><span>Home</span><span class="active"><i class="fas fa-chevron-right"> </i>
+        <p>Đăng ký </p></span></section>
+    <section class="register container"> 
+      <h1>Đăng ký </h1>
+      <form class="form">
+        <h2>Thông tin cá nhân </h2>
+        <div class="form__input"> 
+          <label for="name1">Tên trước*</label>
+          <input type="text" id="name1"/>
+        </div>
+        <div class="form__input"> 
+          <label for="name2">Tên sau*</label>
+          <input type="text" id="name2"/>
+        </div>
+        <div class="form__input"> 
+          <label for="email">Email*</label>
+          <input type="text" id="email"/>
+        </div>
+        <div class="form__input"> 
+          <label for="password">Password*</label>
+          <input type="text" id="password"/>
+        </div>
+        <div class="form__input"> 
+          <label>Đăng ký nhận bản tin 
+            <input class="form__input__checkbox" type="checkbox"/><span class="form__input__checkmark"></span>
+          </label>
+        </div>
+        <h2>Thông tin đăng nhập</h2>
+        <div class="form__input"> 
+          <label for="password">Mật khẩu*</label>
+          <input type="password" id="password"/>
+        </div>
+        <div class="form__input"> 
+          <label for="confirmPassword">Xác nhận mật khẩu*</label>
+          <input type="password" id="confirmPassword"/>
+        </div>
+        <div class="form__action"> <span>GỬI </span><span> <i class="fas fa-undo-alt"> 
+              <p>QUAY LẠI </p></i></span></div>
+      </form>
     </section>
     <footer>
       <div class="layout">
@@ -191,8 +193,8 @@
               <ul>
                 <li><a href="#">Sản phẩm yêu thích</a></li>
                 <li><a href="../account/account.html">Tài khoản</a></li>
-                <li><a href="../register.html">Đăng ký</a></li>
-                <li><a href="../login.html">Đăng nhập</a></li>
+                <li><a href="./register.html">Đăng ký</a></li>
+                <li><a href="./login.html">Đăng nhập</a></li>
               </ul>
             </div>
           </div>

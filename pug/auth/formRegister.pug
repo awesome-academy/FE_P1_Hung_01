@@ -1,0 +1,28 @@
+section.register.container 
+  h1 Đăng ký 
+  form.form
+    h2 Thông tin cá nhân 
+    for i in register1
+      case i
+        when "password"
+          .form__input 
+            label(for=i[0])=i[1]
+            input(type="password" id=i[0])
+        default  
+          .form__input 
+            label(for=i[0])=i[1]
+            input(type="text" id=i[0])  
+    .form__input 
+      label() Đăng ký nhận bản tin 
+        input(type="checkbox").form__input__checkbox
+        span.form__input__checkmark
+    h2 Thông tin đăng nhập
+    for i in register2
+      .form__input 
+        label(for=i[0])=i[1]
+        input(type="password" id=i[0])
+    .form__action 
+      span GỬI 
+      span 
+        i.fas.fa-undo-alt 
+          p QUAY LẠI 
