@@ -6,11 +6,11 @@ section.cart h1 {
   margin-bottom: 30px;
 }
 section.cart table {
-  border: 2px solid #e1e1e1;
+  border: 1px solid #e1e1e1;
   border-collapse: collapse;
 }
 section.cart table tr {
-  border: 2px solid #e1e1e1;
+  border: 1px solid #e1e1e1;
   border-collapse: collapse;
 }
 section.cart table tr th {
@@ -18,13 +18,14 @@ section.cart table tr th {
   font-family: "openSans";
   color: #212121;
   text-transform: uppercase;
-  border: 2px solid #e1e1e1;
+  border: 1px solid #e1e1e1;
   border-collapse: collapse;
   padding: 12px;
+  background-color: #fafafa;
 }
 section.cart table tr td {
   text-align: center;
-  border: 2px solid #e1e1e1;
+  border: 1px solid #e1e1e1;
   border-collapse: collapse;
   padding: 35px;
 }
@@ -55,4 +56,4 @@ section.cart .action a:hover {
   transition: 0.5s;
 }
 
-/*# sourceMappingURL=shoppingcart.css.map */
+/*# sourceMappingURL=shoppingCart.css.map */
