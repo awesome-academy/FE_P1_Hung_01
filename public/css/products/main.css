@@ -127,8 +127,12 @@ section.main .content {
   justify-content: space-between;
   font-size: 18px;
   padding: 11px 0;
+  border-bottom: 1px solid #e6e6e6;
 }
-.content .header .type i, .content .footer .type i {
+.content .header .type a, .content .footer .type a {
+  color: #212121;
+}
+.content .header .type a i, .content .footer .type a i {
   margin-right: 10px;
 }
 .content .header .list span, .content .footer .list span {
