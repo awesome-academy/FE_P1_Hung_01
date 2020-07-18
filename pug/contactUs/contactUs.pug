@@ -6,14 +6,12 @@ block link
   link(rel="stylesheet", href="../../css/footer.css")
   link(rel="stylesheet", href="../../fontawesome-free-5.13.0-web/css/all.min.css")
   link(rel="stylesheet", href="../../css/products/path.css")
-  link(rel="stylesheet", href="../../css/product/thread.css")
-  link(rel="stylesheet", href="../../css/product/information.css")
+  link(rel="stylesheet", href="../../css/contactUs/main.css")
 
 block main
   include ./path
-  include ./thread
-  include ./information
-
+  include ./main
+  
 block li
   for n in dropdownFooter5
     case n 
@@ -28,3 +26,5 @@ block li
           a(href="../auth/login.html")=n
       default
         li
+          a(href="#")=n
+    
