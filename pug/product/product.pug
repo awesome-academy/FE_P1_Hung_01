@@ -1,0 +1,15 @@
+extends ../index
+
+block link
+  link(rel="stylesheet", href="../../css/style.css")
+  link(rel="stylesheet", href="../../css/header.css")
+  link(rel="stylesheet", href="../../css/footer.css")
+  link(rel="stylesheet", href="../../fontawesome-free-5.13.0-web/css/all.min.css")
+  link(rel="stylesheet", href="../../css/products/path.css")
+  link(rel="stylesheet", href="../../css/product/thread.css")
+  link(rel="stylesheet", href="../../css/product/information.css")
+
+block main
+  include ./path
+  include ./thread
+  include ./information
