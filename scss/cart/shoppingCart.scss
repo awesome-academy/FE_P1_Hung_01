@@ -1,0 +1,57 @@
+@import "../mixins";
+
+section.cart {
+  h1 {
+    @include customFont(28px, "openSans");
+    text-transform: uppercase;
+    color: #212121;
+    margin-bottom: 30px;
+  }
+  table {
+    border: 2px solid #e1e1e1;
+    border-collapse: collapse;
+    tr {
+      border: 2px solid #e1e1e1;
+      border-collapse: collapse;
+      th {
+        @include customFont(16px, "openSans");
+        color: #212121;
+        text-transform: uppercase;
+        border: 2px solid #e1e1e1;
+        border-collapse: collapse;
+        padding: 12px;
+      }
+      td {
+        text-align: center;
+        border: 2px solid #e1e1e1;
+        border-collapse: collapse;
+        padding: 35px;
+      }
+      td:nth-child(1) {
+        @include customBackground("../../images/image27.jpg", 120px, 160px);
+        background-position: center;
+      }
+    }
+  }
+  .action {
+    margin: 30px 0 85px 0;
+    display: flex;
+    justify-content: flex-end;
+    a {
+      @include customFont(12px, "openSans");
+      margin-left: 10px;
+      background: #212121;
+      color: $colorWhite;
+      padding: 10px 20px;
+      transition: 0.5s;
+      text: {
+        transform: uppercase;
+        decoration: none;
+      }
+    }
+    a:hover {
+      background: $colorGreen;
+      transition: 0.5s
+    }
+  }
+}
