@@ -14,3 +14,19 @@ block main
     include ./path
     include ./navbar
     include ./main
+    
+block li
+  for n in dropdownFooter5
+    case n 
+      when "Tài khoản"
+        li
+          a(href="../account/account.html")=n
+      when "Đăng ký"
+        li
+          a(href="../register.html")=n
+      when "Đăng nhập"
+        li
+          a(href="../login.html")=n
+      default
+        li
+          a(href="#")=n
