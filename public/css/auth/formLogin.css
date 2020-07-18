@@ -1,58 +1,67 @@
-section.register {
+.login {
   margin: 30px auto 85px auto;
 }
-section.register h1 {
+.login__header h1 {
   font-size: 28px;
   font-family: "openSans";
   text-transform: uppercase;
   color: #212121;
   margin-bottom: 30px;
+  display: inline-block;
 }
-section.register .form {
+.login__header span {
+  font-size: 12px;
+  font-family: "openSans";
+  float: right;
+  padding: 10px 20px;
+  background: #1a1a1a;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.login .form {
   background: #f2f2f2;
   padding: 35px 50px;
 }
-section.register .form h2 {
+.login .form h2 {
   font-size: 18px;
   font-family: "openSans";
   margin-bottom: 20px;
   color: #202020;
   text-transform: uppercase;
 }
-section.register .form__input label {
+.login .form p {
+  font-size: 12px;
+  font-family: "openSansSemiBold";
+  margin-bottom: 40px;
+}
+.login .form__input label {
   font-size: 12px;
   font-family: "openSansSemiBold";
   margin: 10px 0;
   display: block;
 }
-section.register .form__input input {
+.login .form__input input {
   padding: 10px;
   width: 100%;
   border: 1px solid #e7e7e7;
 }
-section.register .form__input__checkbox {
-  width: auto !important;
-}
-section.register .form__action {
-  margin-top: 18px;
-  display: flex;
-  justify-content: space-between;
-}
-section.register .form__action span {
+.login .form span {
   font-size: 12px;
   font-family: "openSans";
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 20px 0 0 10px;
   padding: 10px 20px;
   background: #1a1a1a;
   color: #fff;
   cursor: pointer;
 }
-section.register .form__action span i p {
+.login .form a {
   font-size: 12px;
   font-family: "openSans";
-  display: inline-block;
-}
-section.register .form__action span i::before {
-  margin-right: 5px;
+  text-decoration: none;
+  color: #212121;
 }
 
-/*# sourceMappingURL=formRegister.css.map */
+/*# sourceMappingURL=formLogin.css.map */
