@@ -4,6 +4,7 @@ $colorGray: #e6e6e6;
 $colorBlack: #000;
 $listSale: "../../images/plane.png", "../../images/gift.png", "../../images/star.png";
 $listProduct: "../../images/image9.jpg", "../../images/image10.jpg", "../../images/image11.jpg", "../../images/image12.jpg", "../../images/image13.jpg", "../../images/image14.jpg";
+$listImage: "../../images/image19.jpg", "../../images/image20.jpg", "../../images/image21.jpg";
 
 // mixin
 @mixin customFontFace($fontFamily, $src) {
@@ -92,4 +93,16 @@ $listProduct: "../../images/image9.jpg", "../../images/image10.jpg", "../../imag
     color: $colorWhite;
     transition: 0.5s;
   }
+}
+
+@mixin customImage($image, $width, $height) {
+  .content__detail__image {
+    @include customBackground($image, $width, $height);
+    background-position: center;
+  }
+}
+
+@mixin customImageTwo($image, $width, $height) {
+  @include customBackground($image, $width, $height);
+  background-position: center;
 }

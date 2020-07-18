@@ -1,0 +1,129 @@
+@import "../mixins";
+
+section.information {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  .content {
+    width: 73%;
+    &__nav {
+      border-bottom: 1px solid $colorGray;
+      h1 {
+        @include customFont(21px, "openSansBold");
+        display: inline-block;
+        margin-right: 28px;
+        color: #818181;
+        padding-bottom: 13px;
+        text-transform: uppercase;
+      }
+      .active {
+        color: #131313;
+      }
+    }
+    &__detail {
+      margin-top: 55px;
+      display: flex;
+      justify-content: space-between;
+      &__description {
+        h2 {
+          @include customFont(18px, "openSans");
+          position: relative;
+          margin-bottom: 27px;
+        }
+        h2::after {
+          @include customPosition(absolute, 30px, 0, 2, 70px, 2px, true);
+          content: "";
+          background: $colorGray;
+        }
+        p {
+          @include customFont(12px, "openSans");
+          color: #737373;
+        }
+      }
+    }
+    &__detail:nth-child(2) {
+      @include customImage("../../images/image22.jpg", 320px, 180px);
+    }
+    &__detail:nth-child(3) {
+      @include customImage("../../images/image23.jpg", 320px, 180px);
+      .content__detail__description {
+        h2,p {
+          text-align: right;
+        }
+        h2::after {
+          right: 0;
+          left: auto;
+        }
+      }
+    }
+    &__detail:nth-child(4) {
+      @include customImage("../../images/image24.jpg", 320px, 245px);
+    }
+    &__detail:nth-child(5) {
+      @include customImage("../../images/image25.jpg", 320px, 180px);
+      .content__detail__description {
+        h2,p {
+          text-align: right;
+        }
+        h2::after {
+          right: 0;
+          left: auto;
+        }
+      }
+    }
+  }
+  .sidebar {
+    width: 25%;
+    .sale, .best {
+      h1 {
+        @include customFont(21px, "openSansBold");
+        width: 100%;
+        display: inline-block;
+        margin-right: 28px;
+        color: #818181;
+        padding-bottom: 13px;
+        text-transform: uppercase;
+        border-bottom: 1px solid $colorGray;
+      }
+      .product {
+        display: flex;
+        border-bottom: 1px dashed $colorGray;
+        width: 100%;
+        margin-top: 12px;
+        &__image {
+          @include customBackground("../../images/image26.jpg", 104px, 120px);
+          background-position: center;
+          margin-right: 20px;
+        }
+        &__detail {
+          h2 {
+            @include customFont(13px, "openSans");
+            padding-bottom: 15px;
+          }
+          &__icon {
+            @include customFont(12px, "openSansLight");
+            i{
+              margin: 0 3px 15px 0;
+            }
+            p {
+              display: inline;
+            }
+          }
+          h3 {
+            @include customFont(14px, "lobster");
+          }
+        }
+      }
+    }
+    .sale {
+      .product:nth-child(4) {
+        border: none;
+      }
+    }
+    .best {
+      .product:nth-child(5) {
+        border: none;
+      }
+    }
+  }
+}
