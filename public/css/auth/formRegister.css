@@ -30,6 +30,9 @@ section.register .form__input input {
   width: 100%;
   border: 1px solid #e7e7e7;
 }
+section.register .form__input__checkbox {
+  width: auto !important;
+}
 section.register .form__action {
   margin-top: 18px;
   display: flex;
@@ -41,6 +44,7 @@ section.register .form__action span {
   padding: 10px 20px;
   background: #1a1a1a;
   color: #fff;
+  cursor: pointer;
 }
 section.register .form__action span i p {
   font-size: 12px;

@@ -28,6 +28,9 @@ section.register {
         width: 100%;
         border: 1px solid #e7e7e7;
       }
+      &__checkbox {
+        width: auto !important;
+      }
     }
     &__action {
       margin-top: 18px;
@@ -38,6 +41,7 @@ section.register {
         padding: 10px 20px;
         background: #1a1a1a;
         color: $colorWhite;
+        cursor: pointer;
         i {
           p {
             @include customFont(12px, "openSans");
