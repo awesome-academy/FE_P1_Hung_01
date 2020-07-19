@@ -28,7 +28,12 @@ footer
           h1 Thông tin
           ul
             for n in dropdownFooter3
-              li=n
+              case n 
+                when "Về chúng tôi"
+                  li
+                    a(href="../aboutUs/aboutUs.html")=n
+                default 
+                  li=n
         .list
           h1 My account
           ul
