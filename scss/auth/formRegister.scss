@@ -1,0 +1,53 @@
+@import "../mixins";
+
+section.register {
+  margin: 30px auto 85px auto;
+  h1 {
+    @include customFont(28px, "openSans");
+    text-transform: uppercase;
+    color: #212121;
+    margin-bottom: 30px;
+  }
+  .form {
+    background: #f2f2f2;
+    padding: 35px 50px;
+    h2 {
+      @include customFont(18px, "openSans");
+      margin-bottom: 20px;
+      color: #202020;
+      text-transform: uppercase;
+    }
+    &__input {
+      label {
+        @include customFont(12px, "openSansSemiBold");
+        margin: 10px 0;
+        display: block;
+      }
+      input {
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #e7e7e7;
+      }
+    }
+    &__action {
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        @include customFont(12px, "openSans");
+        padding: 10px 20px;
+        background: #1a1a1a;
+        color: $colorWhite;
+        i {
+          p {
+            @include customFont(12px, "openSans");
+            display: inline-block;
+          }
+        }
+        i::before {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
