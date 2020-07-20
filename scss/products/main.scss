@@ -1,0 +1,219 @@
+@import "../mixins";
+
+section.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px auto 80px auto;
+  sidebar {
+    width: 23%;
+    i {
+      border-bottom: 1px solid $colorGray;
+      padding: 11px 0;
+      width: 100%;
+      h3 {
+        @include customFont(18px, "openSansBold");
+        display: inline-block;
+        color: #212121;
+        padding: 0;
+        border: none;
+      }
+    }
+    .title {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $colorGray;
+      span {
+        @include customFont(17px, "openSans");
+        display: inline;
+        padding: 15px 0 11px 0;
+        color: #383838;
+        cursor: pointer;
+        text-transform: capitalize;
+      }
+      .active {
+        color: $colorGreen;
+      }
+      i {
+        width: auto;
+        margin-top: 18px;
+        color: #c1c1c1;
+      }
+      .fa--black {
+        color: $colorBlack;
+      }
+    }
+    ul {
+      list-style: square inside url("../../images/icon8.png");
+      li {
+        margin: 17px;
+        a {
+          @include customFont(16px, "openSansBold");
+          color: #737373;
+          text-decoration: none;
+        }
+      }
+    }
+    h3 {
+      @include customFont(18px, "openSansBold");
+      border-bottom: 1px dashed $colorGray;
+      color: #212121;
+      padding: 45px 0 11px 0;
+      text-transform: uppercase;
+    }
+    p {
+      @include customFont(16px, "roboto");
+      margin-top: 22px;
+      color: #7d7d7d;
+    }
+    .tag {
+      margin-top: 35px;
+      @include customTag(#1a1a1a);
+    }
+    .image {
+      @include customBackground("../../images/image16.jpg", 100%, 342px);
+      background-position: center;
+      position: relative;
+      margin-top: 50px;
+      h1 {
+        @include customPosition(absolute, 50%, 50%, 2, 126px, 74px, true);
+        @include customFont(30px, "robotoSlabLight");
+        text-align: center;
+        margin-left: -63px;
+        margin-top: -37;
+        color: $colorWhite;
+      }
+    }
+    .image::after {
+      @include customPosition(absolute, 0, 0, 2, 100%, 100%, true);
+      content: "";
+    }
+  }
+  .content {
+    width: 73%;
+  }
+}
+
+.content {
+  .header,.footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 11px 0;
+    border-bottom: 1px solid $colorGray;
+    .type {
+      a {
+        color: #212121;
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+    .list {
+      span {
+        margin: 0 10px;
+        cursor: pointer;
+      }
+      span:hover {
+        color: $colorGreen;
+      }
+    }
+  }
+  .products {
+    display: block;
+    width: 100%;
+    height: 1111px;
+    @for $i from 1 to 7 {
+      $item: nth($listProduct, $n: $i);
+      .product:nth-child(#{$i}) {
+        .product__image {
+          @include customBackground($item, 100%, 270px);
+          background-position: center;
+          border-bottom: 1px dashed $colorGray;
+        }
+      }
+    }
+    .product {
+      width: 33.333333333333%;
+      position: relative;
+      float: left;
+      margin-top: 80px;
+      &__detail {
+        width: 100%;
+        background: $colorWhite;
+        text-align: center;
+        padding-top: 25px;
+        line-height: 1.5;
+        h2 {
+          @include customFont(14px, "openSansBold");
+          color: #b4b4b4;
+        }
+        h3 {
+          @include customFont(16px, "openSans");
+          color: #424242;
+          position: relative;
+          margin-bottom: 30px;
+        }
+        h3::after {
+          content: "";
+          @include customPosition(absolute, 35px,50%, 2, 38px, 2px, true);
+          background: #818181;
+          margin-left: -17px;
+        }
+        i {
+          @include customFont(16px, "lobster");
+          color: $colorGreen;
+        }
+        i:nth-child(4) {
+          color: #b4b4b4;
+          display: none;
+          transition: 0.5s;
+        }
+      }
+      &__image {
+        background-position: center;
+        border-bottom: 1px dashed $colorGray;
+      }
+      &__action {
+        width: 100%;
+        background: $colorWhite;
+        padding-top: 27px;
+        text-align: center;
+        opacity: 0;
+        transition: 0.5s;
+        span {
+          @include customFont(14px, "openSansBold");
+          padding: 10px;
+          border: 1px solid #b4b4b4;
+          border-radius: 10px;
+          transition: 0.5s;
+        }
+        span:hover {
+          background: #1a1a1a;
+          color: $colorWhite;
+          transition: 0.5s;
+        }
+        i {
+          font-size: 14px;
+          padding: 12px;
+          border: 1px solid #b4b4b4;
+          border-radius: 10px;
+          transition: 0.5s;
+          margin-left: 10px;
+        }
+        i:hover {
+          background: #1a1a1a;
+          color: $colorWhite;
+          transition: 0.5s;
+        }
+      }
+    }
+    .product:hover .product__action {
+      opacity: 1;
+      transition: 0.5s;
+    }
+    .product:hover .product__detail i:nth-child(4) {
+      display: inline;
+      transition: 0.5s;
+    }
+  }
+}

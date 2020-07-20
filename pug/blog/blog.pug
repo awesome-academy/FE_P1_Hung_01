@@ -1,0 +1,30 @@
+extends ../index
+
+block link
+  link(rel="stylesheet", href="../../css/style.css")
+  link(rel="stylesheet", href="../../css/header.css")
+  link(rel="stylesheet", href="../../css/footer.css")
+  link(rel="stylesheet", href="../../fontawesome-free-5.13.0-web/css/all.min.css")
+  link(rel="stylesheet", href="../../css/products/path.css")
+  link(rel="stylesheet", href="../../css/blog/main.css")
+
+block main
+  include ./path
+  include ./main
+  
+block li
+  for n in dropdownFooter5
+    case n 
+      when "Tài khoản"
+        li
+          a(href="../account/account.html")=n
+      when "Đăng ký"
+        li
+          a(href="../auth/register.html")=n
+      when "Đăng nhập"
+        li
+          a(href="../auth/login.html")=n
+      default
+        li
+          a(href="#")=n
+    

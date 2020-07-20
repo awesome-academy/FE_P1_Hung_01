@@ -1,0 +1,190 @@
+@import "mixins";
+
+header {
+  border-bottom: 1px solid #e7e7e7;
+  background: transparent;
+  position: relative;
+  z-index: 500;
+  .container {
+    justify-content: space-between;
+    .logo {
+      @include customBackground("../images/logo.png", 180px, 60px);
+      margin: 10px 0;
+    }
+    nav {
+      ul {
+        display: flex;
+        list-style: none;
+        color: #ce4b4b;
+        text-transform: uppercase;
+        @include customFont(12px, "openSansBold");
+        li {
+          padding: 31px 19px;
+          a {
+            color: #1a1a1a;
+            transition: 0.5s;
+            text: {
+              transform: uppercase;
+              decoration: none;
+            }
+          }
+          a:hover {
+            color: $colorGreen;
+            transition: 0.5s;
+          }
+          i {
+            margin-left: 7px;
+          }
+          .nav__dropdown {
+            position: relative;
+            &__icon {
+              @include customBackground("../images/arrow-top.png", 30px, 10px);
+              @include customPosition(absolute, 47px, 18px, 999, 0, 0, false);
+              display: none;
+            }
+            &__content {
+              @include customPosition(absolute, 54px, -212px, 999, 0, 0, false);
+              display: none;
+              background-color: #fff;
+              border: 2px solid $colorGreen;
+              min: {
+                width: 668px;
+                height: 277px;
+              }
+              tr {
+                font-size: 12px;
+                th {
+                  border-bottom: 1px solid $colorGray;
+                  padding: 36px 0 14px 39px;
+                  text-align: left;
+                }
+                td {
+                  font-family: "openSans";
+                  padding: 4px 0 4px 39px;
+                  position: relative;
+                  transition: 0.5s;
+                }
+                td::before {
+                  content: "";
+                  background: $colorGreen;
+                  @include customPosition(absolute, 11px, 30px, 999, 3px, 3px, true);
+                  opacity: 0;
+                  transition: 0.5s;
+                }
+                td:hover::before {
+                  opacity: 1;
+                  transition: 0.5s;
+                }
+                td:hover {
+                  list-style: square;
+                  color: $colorGreen;
+                  transition: 0.5s;
+                  left: 10px;
+                }
+              }
+              tr:nth-child(2) {
+                td {
+                  padding-top: 14px;
+                }
+                td::before {
+                  content: "";
+                  background: $colorGreen;
+                  top: 21px;
+                }
+              }
+              tr:nth-child(9) {
+                td {
+                  padding-bottom: 39px;
+                }
+              }
+            }
+          }
+        }
+        li:hover .nav__dropdown__content,li:hover .nav__dropdown__icon {
+          display: block;
+        }
+      }
+    }
+    .header__right {
+      display: flex;
+      &__cart {
+        @include customBackground("../images/cart.png", 14px, 12px);
+        margin-top: 35px;
+        padding: 0 24px 35px 0;
+      }
+      .dropdown {
+        position: relative;
+        &__icon {
+          @include customBackground("../images/arrow-top.png", 30px, 10px);
+          @include customPosition(absolute, 44px, -8px, 999, 0, 0, false);
+          display: none;
+        }
+        &__content {
+          @include customPosition(absolute, 51px, -78px, 999, 0, 0, false);
+          padding: 9px;
+          display: none;
+          background-color: $colorWhite;
+          border: 2px solid $colorGreen;
+          min: {
+            width: 196px;
+            height: 277px;
+          }
+          .cart {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            font-size: 12px;
+            &__image {
+              @include customBackground("../images/image7.jpg", 68px, 70px);
+            }
+            &__content__title {
+              font-family: "openSans";
+            }
+            &__content__money {
+              font-family: "lobster";
+              color: $colorGreen;
+            }
+            i {
+              cursor: pointer;
+            }
+          }
+          .total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            padding: 19px 0 18px 0;
+            border-top: 1px solid $colorGray;
+            &__title {
+              font-family: "openSans";
+            }
+            &__money {
+              font-family: "lobster";
+              color: $colorGreen;
+              padding-right: 9px;
+            }
+          }
+          a {
+            text-decoration: none;
+            padding: 7px 6px;
+            background: #212121;
+            color: $colorWhite;
+            text-transform: uppercase;
+            cursor: pointer;
+            @include customFont(12px, "openSans");
+          }
+        }
+      }
+      .dropdown:hover .dropdown__content,.dropdown:hover .dropdown__icon {
+        display: block;
+      }
+      &__search {
+        @include customBackground("../images/search.png", 13px, 15px);
+        margin: {
+          top: 35px;
+          left: 24px
+        }
+        padding: 0 0 35px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+$colorWhite: #fff;
+$colorGreen: #789629;
+$colorGray: #e6e6e6;
+$colorBlack: #000;
+$listSale: "../../images/plane.png", "../../images/gift.png", "../../images/star.png";
+$listProduct: "../../images/image9.jpg", "../../images/image10.jpg", "../../images/image11.jpg", "../../images/image12.jpg", "../../images/image13.jpg", "../../images/image14.jpg";
+
+// mixin
+@mixin customFontFace($fontFamily, $src) {
+  @font-face {
+    font-family: $fontFamily;
+    src: url($src);
+  }
+}
+
+@mixin customPosition($position, $top, $left, $z, $width, $height, $result) {
+  position: $position;
+  top: $top;
+  left: $left;
+  z-index: $z;
+  @if $result == true {
+    width: $width;
+    height: $height;
+  }
+}
+
+@mixin customBackground($url, $w, $h) {
+  background: url($url) no-repeat;
+  width: $w;
+  height: $h;
+}
+
+@mixin customFont($size, $family) {
+  font: {
+    size: $size;
+    family: $family;
+  }
+}
+
+@mixin customProduct($image1, $image2, $color, $result) {
+  .product__image {
+    @include customBackground($image1,49.5%, 315px);
+    background-position: center;
+    margin-bottom: 10px;
+  }
+  .product__name {
+    @include customBackground($image2,49.5%, 315px);
+    position: relative;
+    background-position: center;
+    &__arrow {
+      @include customPosition(absolute, 50%, -14px, 2, 30px, 30px, true);
+      background-color: $color;
+      transform: rotate(45deg);
+      margin-top: -15px;
+      @if $result == true {
+        right: -14px;
+        left: auto;
+      }
+    }
+  }
+}
+
+// placeholder
+@mixin customContactTitle {
+  width: 32%;
+  overflow: hidden;
+  &__title {
+    @include customFont(16px, "openSansBold");
+    position: relative;
+    text-align: center;
+    margin-bottom: 65px;
+  }
+  &__title:after {
+    @include customBackground("../../images/icon4.png", 370px, 10px);
+    @include customPosition(absolute, 40px, 50%, 2, 295px, 8px, false);
+    content: "";
+    margin-left: -185px;
+  }
+}
+
+@mixin customTag($color) {
+  span {
+    @include customFont(12px, "openSans");
+    display: inline-block;
+    padding: 6px 8px;
+    margin: 5px 8px 5px 0;
+    transition: 0.5s;
+    border: 1px solid #e8e8e8;
+  }
+  span:hover {
+    background: $color;
+    color: $colorWhite;
+    transition: 0.5s;
+  }
+}
