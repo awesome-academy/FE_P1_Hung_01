@@ -1,0 +1,40 @@
+@import "../mixins";
+
+section.navbar {
+  position: relative;
+  background-color: #f1f1f1;
+  height: 771px;
+  .layout {
+    @include customBackground("../../images/bg_image.jpg", 100%, 857px);
+    @include customPosition(absolute, -86px, auto, 200, 0, 0, false);
+    background-position: center;
+    .content {
+      @include customPosition(absolute, 565px, 20%, 200, 470px, 0, false);
+      text-align: center;
+      h1 {
+        color: $colorGreen;
+        @include customFont(141px, "viceroy");
+      }
+      p {
+        font: {
+          size: 19px;
+          family: "openSansLight";
+        }
+      }
+      h2 {
+        color: $colorGreen;
+        @include customFont(34px, "openSansLight");
+      }
+      span {
+        display: inline-block;
+        margin-top: 28px;
+        cursor: pointer;
+        text: {
+          decoration: underline;
+          transform: uppercase;
+        }
+        @include customFont(18px, "openSansLight");
+      }
+    }
+  }
+}
