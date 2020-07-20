@@ -1,0 +1,40 @@
+@import "../mixins";
+
+.notFound {
+  @include customBackground("../../images/image29.jpg", 100%, 100vh);
+  background-position: center;
+  position: relative;
+  &__main {
+    @include customPosition(absolute, 70%, 50%, 2 , 660px, 200px, true);
+    margin-left: -330px;
+    text-align: center;
+    h1 {
+      @include customFont(32px, "robotoLight");
+      color: #4a5960;
+    }
+    input {
+      @include customFont(16px, "robotoLight");
+      border: 1px solid #666262;
+      border-radius: 30px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      width: 60%;
+    }
+    i {
+      @include customPosition(relative, 0, -35px, 2 , 0, 0, false);
+    }
+    &__action {
+      span {
+        @include customFont(16px, "openSans");
+        display: inline-block;
+        padding: 0 25px;
+        margin-top: 35px;
+        text-transform: uppercase;
+        color: #212121;
+      }
+      span:nth-child(1) {
+        border-right: 1px solid #3c3c3c;
+      }
+    }
+  }
+}
