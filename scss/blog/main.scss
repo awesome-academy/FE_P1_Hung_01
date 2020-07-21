@@ -37,6 +37,7 @@ section.blog {
       .listBlog {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin-bottom: 40px;
         .blog {
           width: 32%;
@@ -75,59 +76,50 @@ section.blog {
             }
           }
         }
-        .blog:nth-child(2) {
-          .blog__image {
-            @include customBackground("../../images/image11.png", 100%, 190px);
-            background-position: center;
+        @for $i from 2 to 10 {
+          $item: nth($listBlog, $n: $i - 1);
+          .blog:nth-child(#{$i}) {
+            .blog__image {
+              @include customBackground($item, 100%, 190px);
+              background-position: center;
+            }
           }
-        }
-        .blog:nth-child(3) {
-          .blog__image {
-            @include customBackground("../../images/image12.png", 100%, 190px);
-            background-position: center;
-          }
-        }
+        } 
       }
-      .listBlog:nth-child(2) {
-        .blog:nth-child(1) {
-          .blog__image {
-            @include customBackground("../../images/image13.png", 100%, 190px);
-            background-position: center;
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {  
+  section.blog {
+    .content {
+      .main {
+        .listBlog {
+          flex-direction: column;
+          .blog {
+            width: 100%;
+            margin-top: 40px;
           }
-        }
-        .blog:nth-child(2) {
-          .blog__image {
-            @include customBackground("../../images/image14.png", 100%, 190px);
-            background-position: center;
-          }
-        }
-        .blog:nth-child(3) {
-          .blog__image {
-            @include customBackground("../../images/image15.png", 100%, 190px);
-            background-position: center;
-          }
-        }
-      }
-      .listBlog:nth-child(3) {
-        .blog:nth-child(1) {
-          .blog__image {
-            @include customBackground("../../images/image16.png", 100%, 190px);
-            background-position: center;
-          }
-        }
-        .blog:nth-child(2) {
-          .blog__image {
-            @include customBackground("../../images/image17.png", 100%, 190px);
-            background-position: center;
-          }
-        }
-        .blog:nth-child(3) {
-          .blog__image {
-            @include customBackground("../../images/image18.png", 100%, 190px);
-            background-position: center;
-          }
+          @for $i from 4 to 10 {
+            .blog:nth-child(#{$i}) {
+              display: none;
+            }
+          } 
         }
       }
     }
   }
 }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {  }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {  }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

@@ -31,6 +31,7 @@ section.blog .content .header .list span:hover, section.blog .content .footer .l
 section.blog .content .main .listBlog {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 section.blog .content .main .listBlog .blog {
@@ -88,41 +89,69 @@ section.blog .content .main .listBlog .blog:nth-child(3) .blog__image {
   height: 190px;
   background-position: center;
 }
-section.blog .content .main .listBlog:nth-child(2) .blog:nth-child(1) .blog__image {
+section.blog .content .main .listBlog .blog:nth-child(4) .blog__image {
   background: url("../../images/image13.png") no-repeat;
   width: 100%;
   height: 190px;
   background-position: center;
 }
-section.blog .content .main .listBlog:nth-child(2) .blog:nth-child(2) .blog__image {
+section.blog .content .main .listBlog .blog:nth-child(5) .blog__image {
   background: url("../../images/image14.png") no-repeat;
   width: 100%;
   height: 190px;
   background-position: center;
 }
-section.blog .content .main .listBlog:nth-child(2) .blog:nth-child(3) .blog__image {
+section.blog .content .main .listBlog .blog:nth-child(6) .blog__image {
   background: url("../../images/image15.png") no-repeat;
   width: 100%;
   height: 190px;
   background-position: center;
 }
-section.blog .content .main .listBlog:nth-child(3) .blog:nth-child(1) .blog__image {
+section.blog .content .main .listBlog .blog:nth-child(7) .blog__image {
   background: url("../../images/image16.png") no-repeat;
   width: 100%;
   height: 190px;
   background-position: center;
 }
-section.blog .content .main .listBlog:nth-child(3) .blog:nth-child(2) .blog__image {
+section.blog .content .main .listBlog .blog:nth-child(8) .blog__image {
   background: url("../../images/image17.png") no-repeat;
   width: 100%;
   height: 190px;
   background-position: center;
 }
-section.blog .content .main .listBlog:nth-child(3) .blog:nth-child(3) .blog__image {
+section.blog .content .main .listBlog .blog:nth-child(9) .blog__image {
   background: url("../../images/image18.png") no-repeat;
   width: 100%;
   height: 190px;
   background-position: center;
+}
+
+@media (max-width: 575.98px) {
+  section.blog .content .main .listBlog {
+    flex-direction: column;
+  }
+  section.blog .content .main .listBlog .blog {
+    width: 100%;
+    margin-top: 40px;
+  }
+  section.blog .content .main .listBlog .blog:nth-child(4) {
+    display: none;
+  }
+  section.blog .content .main .listBlog .blog:nth-child(5) {
+    display: none;
+  }
+  section.blog .content .main .listBlog .blog:nth-child(6) {
+    display: none;
+  }
+  section.blog .content .main .listBlog .blog:nth-child(7) {
+    display: none;
+  }
+  section.blog .content .main .listBlog .blog:nth-child(8) {
+    display: none;
+  }
+  section.blog .content .main .listBlog .blog:nth-child(9) {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
