@@ -112,4 +112,27 @@ footer .footer__bottom__pay {
   background-position: center;
 }
 
+@media (max-width: 575.98px) {
+  footer .layout .row {
+    flex-direction: column;
+  }
+  footer .layout .row .contact {
+    width: 100%;
+    border-bottom: 1px solid #464646;
+  }
+  footer .layout .row .list {
+    width: 100%;
+    border-bottom: 1px solid #464646;
+    margin-top: 33px;
+  }
+  footer .footer__bottom p {
+    margin-top: 25px;
+  }
+  footer .footer__bottom__pay {
+    margin-top: 20px;
+    width: 240px;
+    float: none;
+  }
+}
+
 /*# sourceMappingURL=footer.css.map */
