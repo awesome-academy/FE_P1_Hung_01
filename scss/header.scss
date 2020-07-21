@@ -1,0 +1,275 @@
+@import "mixins";
+
+header {
+  border-bottom: 1px solid #e7e7e7;
+  background: transparent;
+  position: relative;
+  z-index: 500;
+  .container {
+    justify-content: space-between;
+    .logo {
+      @include customBackground("../images/logo.png", 180px, 60px);
+      margin: 12px 0;
+    }
+    nav {
+      input {
+        display: none;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        color: #ce4b4b;
+        text-transform: uppercase;
+        @include customFont(12px, "openSansBold");
+        li {
+          padding: 31px 19px;
+          a {
+            color: #1a1a1a;
+            transition: 0.5s;
+            text: {
+              transform: uppercase;
+              decoration: none;
+            }
+          }
+          a:hover {
+            color: $colorGreen;
+            transition: 0.5s;
+          }
+          i {
+            margin-left: 7px;
+          }
+          .nav__dropdown {
+            position: relative;
+            &__icon {
+              @include customBackground("../images/arrow-top.png", 30px, 10px);
+              @include customPosition(absolute, 47px, 18px, 999, 0, 0, false);
+              display: none;
+            }
+            &__content {
+              @include customPosition(absolute, 54px, -212px, 999, 0, 0, false);
+              display: none;
+              background-color: #fff;
+              border: 2px solid $colorGreen;
+              min: {
+                width: 668px;
+                height: 277px;
+              }
+              tr {
+                font-size: 12px;
+                th {
+                  border-bottom: 1px solid $colorGray;
+                  padding: 36px 0 14px 39px;
+                  text-align: left;
+                }
+                td {
+                  font-family: "openSans";
+                  padding: 4px 0 4px 39px;
+                  position: relative;
+                  transition: 0.5s;
+                }
+                td::before {
+                  content: "";
+                  background: $colorGreen;
+                  @include customPosition(absolute, 11px, 30px, 999, 3px, 3px, true);
+                  opacity: 0;
+                  transition: 0.5s;
+                }
+                td:hover::before {
+                  opacity: 1;
+                  transition: 0.5s;
+                }
+                td:hover {
+                  list-style: square;
+                  color: $colorGreen;
+                  transition: 0.5s;
+                  left: 10px;
+                }
+              }
+              tr:nth-child(2) {
+                td {
+                  padding-top: 14px;
+                }
+                td::before {
+                  content: "";
+                  background: $colorGreen;
+                  top: 21px;
+                }
+              }
+              tr:nth-child(9) {
+                td {
+                  padding-bottom: 39px;
+                }
+              }
+            }
+          }
+        }
+        li:hover .nav__dropdown__content,li:hover .nav__dropdown__icon {
+          display: block;
+        }
+      }
+    }
+    .header__right {
+      display: flex;
+      &__cart {
+        @include customBackground("../images/cart.png", 14px, 12px);
+        margin-top: 35px;
+        padding: 0 24px 35px 0;
+      }
+      .dropdown {
+        position: relative;
+        &__icon {
+          @include customBackground("../images/arrow-top.png", 30px, 10px);
+          @include customPosition(absolute, 44px, -8px, 999, 0, 0, false);
+          display: none;
+        }
+        &__content {
+          @include customPosition(absolute, 51px, -78px, 999, 0, 0, false);
+          padding: 9px;
+          display: none;
+          background-color: $colorWhite;
+          border: 2px solid $colorGreen;
+          min: {
+            width: 196px;
+            height: 277px;
+          }
+          .cart {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            font-size: 12px;
+            &__image {
+              @include customBackground("../images/image7.jpg", 68px, 70px);
+            }
+            &__content__title {
+              font-family: "openSans";
+            }
+            &__content__money {
+              font-family: "lobster";
+              color: $colorGreen;
+            }
+            i {
+              cursor: pointer;
+            }
+          }
+          .total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            padding: 19px 0 18px 0;
+            border-top: 1px solid $colorGray;
+            &__title {
+              font-family: "openSans";
+            }
+            &__money {
+              font-family: "lobster";
+              color: $colorGreen;
+              padding-right: 9px;
+            }
+          }
+          a {
+            text-decoration: none;
+            padding: 7px 6px;
+            background: #212121;
+            color: $colorWhite;
+            text-transform: uppercase;
+            cursor: pointer;
+            @include customFont(12px, "openSans");
+          }
+        }
+      }
+      .dropdown:hover .dropdown__content,.dropdown:hover .dropdown__icon {
+        display: block;
+      }
+      &__search {
+        @include customBackground("../images/search.png", 13px, 15px);
+        margin: {
+          top: 35px;
+          left: 24px
+        }
+        padding: 0 0 35px 0;
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  .container {
+    width: 95%;
+  }
+  header {
+    .container {
+      nav {
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        label {
+          display: block;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          position: absolute;
+          right: 15px;
+          top: 25px;
+          background: $colorBlack;
+        }
+        label::after {
+          content: '';
+          display: block;
+          width: 20px;
+          height: 2px;
+          background: $colorWhite;
+          margin: 9px 5px;
+          box-shadow: 0px 5px 0px $colorWhite, 0px 10px 0px $colorWhite;
+        }
+      
+        #menu:checked ~ ul {
+          @include customPosition(relative, 85px, auto, 999, 130px, auto, true);
+          display: block;
+        }
+        ul {
+          display: none;
+          flex-direction: column;
+          li {
+            color: $colorGray;
+            padding: 20px;
+            background-color: $colorWhite;
+            i {
+              display: none;
+            }
+          }
+          li:hover .nav__dropdown__content,li:hover .nav__dropdown__icon {
+            display: none;
+          }
+        }
+        
+      }
+      .header__right {
+        &__cart {
+          margin-top: 34px;
+          padding: 0 25px 34px 0;
+        }
+        .dropdown:hover .dropdown__content,.dropdown:hover .dropdown__icon {
+          display: none;
+        }
+        &__search {
+          margin: 34px 68px 0 0;
+          padding: 0 0 34px 0;
+        }
+      }
+    }
+  }
+ }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {  }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {  }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

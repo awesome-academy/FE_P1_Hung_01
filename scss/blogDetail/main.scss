@@ -1,0 +1,157 @@
+@import "../mixins";
+
+section.blogDetail {
+  margin: 30px auto 85px auto;
+  h1 {
+    @include customFont(28px, "openSans");
+    text-transform: uppercase;
+    color: #212121;
+    margin-bottom: 30px;
+  }
+  .main {
+    display: flex;
+    justify-content: space-between;
+    .sidebar {
+      width: 26%;
+      h2 {
+        @include customFont(18px, "openSans");
+        padding: 5px 0 10px 0;
+        color: #202020;
+        text-transform: uppercase;
+        border-bottom: 1px solid $colorGray;
+      }
+      .newBlog {
+        display: flex;
+        margin-top: 30px;
+        &__image {
+          @include customBackground("../../images/image19.png", 40%, 50px);
+          background-position: center;
+        }
+        &__detail {
+          i:nth-child(1) {
+            @include customFont(18px, "openSansBold");
+            text-decoration: none;
+          }
+          i:nth-child(2) {
+            @include customFont(14px, "openSansBold");
+            text-decoration: none;
+          }
+          p {
+            @include customFont(14px, "openSansItalic");
+            color: #737373;
+          }
+        }
+      }
+      .newBlog:nth-child(2) {
+        .newBlog__image {
+          @include customBackground("../../images/image20.png", 40%, 50px);
+          background-position: center;
+        }
+      }
+      .newBlog:nth-child(3) {
+        .newBlog__image {
+          @include customBackground("../../images/image21.png", 40%, 50px);
+          background-position: center;
+        }
+      }
+      .tag {
+        width: 100%;
+        @include customTag($colorGreen);
+        &__title {
+          @include customFont(18px, "openSans");
+          padding: 70px 0 15px 0;
+          color: #202020;
+          text-transform: uppercase;
+          border-bottom: 1px solid $colorGray;
+          margin-bottom: 25px;
+        }
+      }
+    }
+    .blog {
+      width: 70%;
+      &__image {
+        @include customBackground("../../images/image22.png", 100%, 445px);
+        background-position: center;
+      }
+      h1 {
+        padding: 20px 0 20px 0;
+        border-bottom: 1px solid $colorGray;
+      }
+      p {
+        @include customFont(14px, "openSans");
+        color: #6d6d6d;
+        margin-bottom: 25px;
+        line-height: 1.5;
+      }
+      i {
+        @include customFont(14px, "openSans");
+        color: #b4b4b4;
+        border-bottom: 1px solid $colorGray;
+        padding-bottom: 15px;
+        display: block;
+      }
+      &__footer {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 65px;
+        span {
+          @include customFont(14px, "openSans");
+          color: #b4b4b4;
+          padding-top: 10px;
+          cursor: pointer;
+        }
+      }
+      .tag {
+        @include customFont(14px, "openSans");
+        border-bottom: 1px solid $colorGray;
+        padding-bottom: 15px;
+        p {
+          display: inline;
+          margin-left: 10px;
+          font-style: none;
+          color: #656565;
+          border: none;
+        }
+      }
+      &__email {
+        h2 {
+          @include customFont(18px, "openSans");
+          margin-bottom: 20px;
+          color: #202020;
+          text-transform: uppercase;
+          margin-top: 30px;
+        }
+        .form {
+          &__input {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            label {
+              @include customFont(12px, "openSansSemiBold");
+            }
+            input {
+              padding: 10px;
+              width: 93%;
+              border: 1px solid #e7e7e7;
+            }
+            textarea {
+              padding: 10px;
+              width: 93%;
+              border: 1px solid #e7e7e7;
+            }
+          }
+          span {
+            @include customFont(12px, "openSans");
+            display: inline-block;
+            text-transform: uppercase;
+            margin: 20px 0 0 57px;
+            padding: 10px 20px;
+            background: #1a1a1a;
+            color: $colorWhite;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

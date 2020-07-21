@@ -1,0 +1,43 @@
+@import "../mixins";
+
+section.aboutUs {
+  margin: 30px auto 85px auto;
+  h1 {
+    @include customFont(28px, "openSans");
+    text-transform: uppercase;
+    color: #212121;
+    margin-bottom: 30px;
+  }
+  .introduce {
+    display: flex;
+    justify-content: space-between;
+    &__image {
+      @include customBackground("../../images/image28.jpg", 49%, 366px);
+      background-position: center;
+    }
+    &__detail {
+      width: 49%;
+      &__logo {
+        @include customBackground("../../images/logo.png", 180px, 55px);
+        background-position: center;
+        margin-bottom: 30px;
+      }
+      h2 {
+        @include customFont(18px, "openSans");
+        margin-bottom: 20px;
+        color: #202020;
+        text-transform: uppercase;
+      }
+      p {
+        @include customFont(14px, "openSans");
+        color: #6d6d6d;
+        margin-bottom: 25px;
+      }
+      span {
+        @include customFont(14px, "openSans");
+        cursor: pointer;
+        color: #818181;
+      }
+    }
+  }
+}
