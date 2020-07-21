@@ -37,7 +37,7 @@ section.thread {
   .image {
     @include customBackground("../../images/image17.jpg", 46%, 570px);
     background-position: center;
-    border: 1px solid #b4b4b4;
+    background-size: contain;
   }
   .product {
     width: 44%;
@@ -127,3 +127,50 @@ section.thread {
     }
   }
 }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  section.thread {
+    flex-wrap: wrap;
+    .sidebar {
+      width: 20%;
+      margin-top: 0;
+    }
+    .image {
+      width: 78%;
+      height: 306px;
+      background-size: contain;
+      margin-top: 5px;
+    }
+    .product {
+      width: 100%;
+      margin-top: 40px;
+      h1 {
+        font-size: 18px;
+      }
+      select {
+        width: 90%;
+      }
+      &__footer {
+        flex-direction: column;
+        margin-top: 25px;
+        &__icon {
+          width: 370px;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {  }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {  }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

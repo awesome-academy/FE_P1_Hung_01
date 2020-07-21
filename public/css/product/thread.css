@@ -50,7 +50,7 @@ section.thread .image {
   width: 46%;
   height: 570px;
   background-position: center;
-  border: 1px solid #b4b4b4;
+  background-size: contain;
 }
 section.thread .product {
   width: 44%;
@@ -145,6 +145,40 @@ section.thread .product__footer__icon {
   width: 395px;
   height: 30px;
   background-position: center;
+}
+
+@media (max-width: 575.98px) {
+  section.thread {
+    flex-wrap: wrap;
+  }
+  section.thread .sidebar {
+    width: 20%;
+    margin-top: 0;
+  }
+  section.thread .image {
+    width: 78%;
+    height: 306px;
+    background-size: contain;
+    margin-top: 5px;
+  }
+  section.thread .product {
+    width: 100%;
+    margin-top: 40px;
+  }
+  section.thread .product h1 {
+    font-size: 18px;
+  }
+  section.thread .product select {
+    width: 90%;
+  }
+  section.thread .product__footer {
+    flex-direction: column;
+    margin-top: 25px;
+  }
+  section.thread .product__footer__icon {
+    width: 370px;
+    margin-top: 25px;
+  }
 }
 
 /*# sourceMappingURL=thread.css.map */
