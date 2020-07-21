@@ -20,4 +20,10 @@ section.navbar .content p {
   margin-top: 45px;
 }
 
+@media (max-width: 575.98px) {
+  section.navbar {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=navbar.css.map */

@@ -65,4 +65,24 @@ section.main .content .listProducts .product__action i:hover {
   transition: 0.5s;
 }
 
+@media (max-width: 575.98px) {
+  section.main .content .listProducts .product {
+    flex-direction: column;
+  }
+  section.main .content .listProducts .product__image {
+    width: 100%;
+  }
+  section.main .content .listProducts .product__detail {
+    width: 100%;
+  }
+  section.main .content .listProducts .product__detail h1 {
+    font-size: 16px;
+    font-family: "openSans";
+    margin-top: 40px;
+  }
+  section.main .content .listProducts .product__detail__description {
+    display: inline;
+  }
+}
+
 /*# sourceMappingURL=listProducts.css.map */
