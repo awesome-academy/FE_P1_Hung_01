@@ -1,0 +1,21 @@
+section.listProduct
+  .sale
+    ul
+      li Sản phẩm mới 
+      li.active Sản phẩm bán chạy
+      li Sản phẩm được biệt
+  .list
+    ul
+      li Mỹ phẩm
+      li Chăm sóc da
+      li Dành cho tóc 
+      li Nước hoa 
+      li.active Trang sức 
+      li Quà tặng 
+  .products
+    for i in products
+      .product
+        + customProducts(i)
+  .icon
+    .icon__right
+    .icon__left
