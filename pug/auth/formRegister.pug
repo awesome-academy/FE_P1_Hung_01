@@ -1,0 +1,32 @@
+section.register.container 
+  h1 Đăng ký 
+  form.form
+    h2 Thông tin cá nhân 
+    .form__input 
+      label(for="name1") Tên trước* 
+      input(type="text" id="name1") 
+    .form__input 
+      label(for="name2") Tên sau* 
+      input(type="text" id="name2")
+    .form__input 
+      label(for="email") Email*  
+      input(type="text" id="email") 
+    .form__input 
+      label(for="password") Password* 
+      input(type="password" id="password") 
+    .form__input 
+      label() Đăng ký nhận bản tin 
+        input(type="checkbox").form__input__checkbox
+        span.form__input__checkmark
+    h2 Thông tin đăng nhập
+    .form__input 
+      label(for="password") Mật khẩukhẩu* 
+      input(type="password" id="password")
+    .form__input 
+      label(for="confirmPassword") Xác nhận mật khẩu* 
+      input(type="password" id="confirmPassword")
+    .form__action 
+      span GỬI 
+      span 
+        i.fas.fa-undo-alt 
+          p QUAY LẠI 

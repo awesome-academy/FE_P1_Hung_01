@@ -1,0 +1,113 @@
+@import "../mixins";
+
+section.content {
+  .row {
+    justify-content: space-between;
+    .col {
+      width: 49.5%;
+      margin-bottom: 10px;
+      .product {
+        display: flex;
+        justify-content: space-between;
+        @include customProduct("../../images/image1.jpg", "../../images/image1.png", #e3ce33, false);
+      }
+      .product:nth-child(2) {
+        @include customProduct("../../images/image6.jpg", "../../images/image2.png", #cbd3df, true);
+      }
+      .image {
+        @include customBackground("../../images/image3.jpg",100%, 641px);
+        background-position: center;
+        position: relative;
+        &__layout {
+          @include customPosition(absolute, 0, 0, 2, 100%, 100%, true);
+          background: rgba(0,0,0,0.1);
+          opacity: 0;
+          transition: 0.5s;
+          &__icon {
+            @include customBackground("../../images/play.png",26px, 38px);
+            @include customPosition(absolute, 50%, 50%, 4, 26px, 38px, false);
+            margin-left: -19px;
+            margin-top: -13px;
+          }
+          &__icon::before {
+            @include customPosition(absolute, 50%, 50%, 2, 100px, 100px, true);
+            content: "";
+            border-radius: 50%;
+            background: rgba(0,0,0,0.5);
+            margin-left: -53px;
+            margin-top: -50px;
+          }
+        }
+      }
+      .image:hover .image__layout {
+        opacity: 1;
+        transition: 0.5s;
+      }
+    }
+  }
+  .row:nth-child(2) {
+    .col {
+      .product {
+        @include customProduct("../../images/image5.jpg", "../../images/image3.png", #88d8da, true);
+      }
+      .product:nth-child(2) {
+        @include customProduct("../../images/image4.jpg", "../../images/image4.png", #f49ac2, false);
+      }
+      .image {
+        @include customBackground("../../images/image2.jpg",100%, 641px);
+      }
+    }
+  }
+  .comment {
+    display: flex;
+    @include customBackground("../../images/image5.png", 100%, 335px);
+    background-position: right;
+    &__image {
+      @include customBackground("../../images/image6.png", 131px, 131px);
+      background-position: center;
+      border-radius: 50%;
+      border: 3px solid #cbd4b3;
+      margin: {
+        top: 99px;
+        right: 50px;
+      }
+    }
+    &__text {
+      width: 50%;
+      margin-top: 99px;
+      line-height: 1.5;
+      &__content {
+        @include customFont(16px, "openSans");
+        margin-bottom: 30px;
+        i {
+          color: $colorGreen;
+        }
+        p {
+          display: inline;
+        }
+      }
+      &__title {
+        @include customFont(14px, "openSansLight");
+        margin-bottom: 35px;
+        span {
+          @include customFont(14px, "openSansItalic");
+          margin-left: 10px;
+          color: #737373;
+        }
+      }
+      &__icon {
+        span {
+          @include customBackground(none, 7px, 7px);
+          display: inline-block;
+          background: #131313;
+          margin-right: 8px;
+          cursor: pointer;
+        }
+        span:nth-child(2) {
+          background: #737373;
+        }
+      }
+    }
+    
+  }
+}
