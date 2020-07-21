@@ -1,0 +1,38 @@
+@import "../mixins";
+
+section.navbar {
+  @include customBackground("../../images/image15.jpg", 100%, 170px);
+  .content {
+    display: flex;
+    h1 {
+      @include customFont(74px, "lobster");
+      color: $colorWhite;
+      margin: 40px 25px 0 0;
+    }
+    p {
+      @include customFont(30px, "robotoLight");
+      color: $colorWhite;
+      text-transform: uppercase;
+      margin-top: 45px;
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {  
+  section.navbar {
+    display: none;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {  }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {  }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
