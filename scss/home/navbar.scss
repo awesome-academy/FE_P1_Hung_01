@@ -1,0 +1,76 @@
+@import "../mixins";
+
+section.navbar {
+  position: relative;
+  background-color: #f1f1f1;
+  height: 771px;
+  .layout {
+    @include customBackground("../../images/bg_image.jpg", 100%, 857px);
+    @include customPosition(absolute, -86px, auto, 200, 0, 0, false);
+    background-position: center;
+    .content {
+      @include customPosition(absolute, 565px, 20%, 200, 470px, 0, false);
+      text-align: center;
+      h1 {
+        color: $colorGreen;
+        @include customFont(141px, "viceroy");
+      }
+      p {
+        @include customFont(19px, "openSansLight");
+      }
+      h2 {
+        color: $colorGreen;
+        @include customFont(34px, "openSansLight");
+      }
+      span {
+        display: inline-block;
+        margin-top: 28px;
+        cursor: pointer;
+        text: {
+          decoration: underline;
+          transform: uppercase;
+        }
+        @include customFont(18px, "openSansLight");
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {  
+  section.navbar {
+    height: 495px;
+    .layout {
+      @include customBackground("../../images/image30.jpg", 100%, 580px);
+      .content {
+        top: 305px;
+        left: 0;
+        text-align: center;
+        width: 340px;
+        h1 {
+          font-size: 88px;
+        }
+        p {
+          font-size: 16px;
+          width: 220px;
+          margin-left: 42.5px;
+        }
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {  }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {  }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
