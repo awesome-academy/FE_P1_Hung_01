@@ -42,12 +42,14 @@ $listBlog: "../../images/image11.png", "../../images/image12.png", "../../images
   .product__image {
     @include customBackground($image1,49.5%, 315px);
     background-position: center;
+    background-size: cover;
     margin-bottom: 10px;
   }
   .product__name {
     @include customBackground($image2,49.5%, 315px);
     position: relative;
     background-position: center;
+    background-size: cover;
     &__arrow {
       @include customPosition(absolute, 50%, -14px, 2, 30px, 30px, true);
       background-color: $color;
