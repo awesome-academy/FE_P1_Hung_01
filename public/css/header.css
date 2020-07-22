@@ -209,7 +209,7 @@ header .container .header__right__search {
 
 @media (max-width: 575.98px) {
   .container {
-    width: 95%;
+    width: 56%;
   }
 
   header .container nav {
@@ -273,9 +273,9 @@ header .container .header__right__search {
     padding: 0 0 34px 0;
   }
 }
-@media (max-width: 767.98px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
   .container {
-    width: 95%;
+    width: 56%;
   }
 
   header .container nav {
@@ -339,9 +339,9 @@ header .container .header__right__search {
     padding: 0 0 34px 0;
   }
 }
-@media (max-width: 991.98px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
   .container {
-    width: 95%;
+    width: 56%;
   }
 
   header .container nav {
@@ -403,11 +403,15 @@ header .container .header__right__search {
   header .container .header__right__search {
     margin: 34px 68px 0 0;
     padding: 0 0 34px 0;
+  }
+
+  header .container nav label {
+    right: 185px;
   }
 }
-@media (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .container {
-    width: 95%;
+    width: 56%;
   }
 
   header .container nav {
@@ -469,6 +473,10 @@ header .container .header__right__search {
   header .container .header__right__search {
     margin: 34px 68px 0 0;
     padding: 0 0 34px 0;
+  }
+
+  header .container nav label {
+    right: 225px;
   }
 }
 

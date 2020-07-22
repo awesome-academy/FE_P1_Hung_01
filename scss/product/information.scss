@@ -142,44 +142,23 @@ section.information {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {  
-  section.information {
-    .content {
-      width: 100%;
-      &__nav {
-        h1 {
-          @include customFont(10px, "openSansBold");
-        }
-      }
-      &__detail {
-        p {
-          @include customFont(10px, "openSans");
-        }
-        h2 {
-          margin-top: 40px;
-        }
-      }
-      &__detail:nth-child(2), &__detail:nth-child(4) {
-        flex-wrap: wrap-reverse;
-      }
-      &__detail:nth-child(3), &__detail:nth-child(5) {
-        flex-direction: column;
-        flex-wrap: wrap-reverse;
-      }
-    }
-    .sidebar {
-      display: none;
-    }
-  }
+  @include responsiveProductInformation;
 }
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {  }
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  @include responsiveProductInformation;
+}
 
 // Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {  }
+@media (min-width: 768px) and (max-width: 991.98px) {  
+  @include responsiveProductInformation;
+}
 
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {  }
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+  @include responsiveProductInformation;
+}
 
 // Extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width

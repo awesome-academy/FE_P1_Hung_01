@@ -100,7 +100,7 @@ $listBlog: "../../images/image11.png", "../../images/image12.png", "../../images
 // placeholder
 @mixin responsiveHeader {
   .container {
-    width: 95%;
+    width: 56%;
   }
   header {
     .container {
@@ -191,6 +191,71 @@ $listBlog: "../../images/image11.png", "../../images/image12.png", "../../images
         margin-top: 20px;
         width: 240px;
         float: none;
+      }
+    }
+  }
+}
+
+@mixin responsiveProductInformation {
+  section.information {
+    .content {
+      width: 100%;
+      &__nav {
+        h1 {
+          @include customFont(10px, "openSansBold");
+        }
+      }
+      &__detail {
+        p {
+          @include customFont(10px, "openSans");
+        }
+        h2 {
+          margin-top: 40px;
+        }
+      }
+      &__detail:nth-child(2), &__detail:nth-child(4) {
+        flex-wrap: wrap-reverse;
+      }
+      &__detail:nth-child(3), &__detail:nth-child(5) {
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+      }
+    }
+    .sidebar {
+      display: none;
+    }
+  }
+}
+
+@mixin responsiveProductThread {
+  section.thread {
+    flex-wrap: wrap;
+    .sidebar {
+      width: 20%;
+      margin-top: 0;
+    }
+    .image {
+      width: 78%;
+      height: 306px;
+      background-size: contain;
+      margin-top: 5px;
+    }
+    .product {
+      width: 100%;
+      margin-top: 40px;
+      h1 {
+        font-size: 18px;
+      }
+      select {
+        width: 90%;
+      }
+      &__footer {
+        flex-direction: column;
+        margin-top: 25px;
+        &__icon {
+          width: 370px;
+          margin-top: 25px;
+        }
       }
     }
   }

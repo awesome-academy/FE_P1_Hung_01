@@ -182,7 +182,7 @@ footer .footer__bottom__pay {
     width: 100%;
   }
   footer .layout .container .row .contact i:nth-child(4), footer .layout .container .row .contact i:nth-child(6) {
-    margin-right: 350px;
+    margin-right: 100px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -211,8 +211,7 @@ footer .footer__bottom__pay {
     width: 100%;
   }
   footer .layout .container .row .contact i:nth-child(4), footer .layout .container .row .contact i:nth-child(6) {
-    margin-right: 420px;
-    width: 290px;
+    margin-right: 200px;
   }
 }
 
