@@ -37,9 +37,9 @@ footer .layout .row .contact i:nth-child(4), footer .layout .row .contact i:nth-
   margin: 10px;
 }
 footer .layout .row .contact i:nth-child(2) p {
-  width: 80%;
+  width: 90%;
   line-height: 3;
-  margin-left: 40px;
+  margin-left: 32px;
 }
 footer .layout .row .contact i:nth-child(2)::before {
   position: absolute;
@@ -132,6 +132,87 @@ footer .footer__bottom__pay {
     margin-top: 20px;
     width: 240px;
     float: none;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  footer .layout .row {
+    flex-direction: column;
+  }
+  footer .layout .row .contact {
+    width: 100%;
+    border-bottom: 1px solid #464646;
+  }
+  footer .layout .row .list {
+    width: 100%;
+    border-bottom: 1px solid #464646;
+    margin-top: 33px;
+  }
+  footer .footer__bottom p {
+    margin-top: 25px;
+  }
+  footer .footer__bottom__pay {
+    margin-top: 20px;
+    width: 240px;
+    float: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  footer .layout .row {
+    flex-direction: column;
+  }
+  footer .layout .row .contact {
+    width: 100%;
+    border-bottom: 1px solid #464646;
+  }
+  footer .layout .row .list {
+    width: 100%;
+    border-bottom: 1px solid #464646;
+    margin-top: 33px;
+  }
+  footer .footer__bottom p {
+    margin-top: 25px;
+  }
+  footer .footer__bottom__pay {
+    margin-top: 20px;
+    width: 240px;
+    float: none;
+  }
+
+  footer .layout .container .row .contact i.fas.fa-map-marker-alt {
+    width: 100%;
+  }
+  footer .layout .container .row .contact i:nth-child(4), footer .layout .container .row .contact i:nth-child(6) {
+    margin-right: 350px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  footer .layout .row {
+    flex-direction: column;
+  }
+  footer .layout .row .contact {
+    width: 100%;
+    border-bottom: 1px solid #464646;
+  }
+  footer .layout .row .list {
+    width: 100%;
+    border-bottom: 1px solid #464646;
+    margin-top: 33px;
+  }
+  footer .footer__bottom p {
+    margin-top: 25px;
+  }
+  footer .footer__bottom__pay {
+    margin-top: 20px;
+    width: 240px;
+    float: none;
+  }
+
+  footer .layout .container .row .contact i.fas.fa-map-marker-alt {
+    width: 100%;
+  }
+  footer .layout .container .row .contact i:nth-child(4), footer .layout .container .row .contact i:nth-child(6) {
+    margin-right: 420px;
+    width: 290px;
   }
 }
 

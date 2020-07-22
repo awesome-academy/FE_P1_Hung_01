@@ -96,3 +96,102 @@ $listBlog: "../../images/image11.png", "../../images/image12.png", "../../images
     transition: 0.5s;
   }
 }
+
+// placeholder
+@mixin responsiveHeader {
+  .container {
+    width: 95%;
+  }
+  header {
+    .container {
+      nav {
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        label {
+          display: block;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          position: absolute;
+          right: 15px;
+          top: 25px;
+          background: $colorBlack;
+        }
+        label::after {
+          content: '';
+          display: block;
+          width: 20px;
+          height: 2px;
+          background: $colorWhite;
+          margin: 9px 5px;
+          box-shadow: 0px 5px 0px $colorWhite, 0px 10px 0px $colorWhite;
+        }
+      
+        #menu:checked ~ ul {
+          @include customPosition(relative, 85px, auto, 999, 130px, auto, true);
+          display: block;
+        }
+        ul {
+          display: none;
+          flex-direction: column;
+          li {
+            color: $colorGray;
+            padding: 20px;
+            background-color: $colorWhite;
+            i {
+              display: none;
+            }
+          }
+          li:hover .nav__dropdown__content,li:hover .nav__dropdown__icon {
+            display: none;
+          }
+        }
+        
+      }
+      .header__right {
+        &__cart {
+          margin-top: 34px;
+          padding: 0 25px 34px 0;
+        }
+        .dropdown:hover .dropdown__content,.dropdown:hover .dropdown__icon {
+          display: none;
+        }
+        &__search {
+          margin: 34px 68px 0 0;
+          padding: 0 0 34px 0;
+        }
+      }
+    }
+  }
+}
+
+@mixin responsiveFooter {
+  footer {
+    .layout {
+      .row {
+        flex-direction: column;
+        .contact {
+          width: 100%;
+          border-bottom: 1px solid #464646;
+        }
+        .list {
+          width: 100%;
+          border-bottom: 1px solid #464646;
+          margin-top: 33px;
+        }
+      }
+    }
+    .footer__bottom {
+      p {
+        margin-top: 25px;
+      }
+      &__pay {
+        margin-top: 20px;
+        width: 240px;
+        float: none;
+      }
+    }
+  }
+}

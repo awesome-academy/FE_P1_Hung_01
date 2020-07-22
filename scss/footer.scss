@@ -34,9 +34,9 @@ footer {
         }
         i:nth-child(2) {
           p {
-            width: 80%;
+            width: 90%;
             line-height: 3;
-            margin-left: 40px;
+            margin-left: 32px;
           }
         }
         i:nth-child(2)::before {
@@ -107,42 +107,56 @@ footer {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
+  @include responsiveFooter;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  @include responsiveFooter;
+}
+
+// Medium devices (tablets, less than 992px)
+@media (min-width: 768px) and (max-width: 991.98px) {  
+  @include responsiveFooter;
   footer {
     .layout {
-      .row {
-        flex-direction: column;
-        .contact {
-          width: 100%;
-          border-bottom: 1px solid #464646;
+      .container {
+        .row {
+          .contact {
+            i.fas.fa-map-marker-alt {
+              width: 100%;
+            }
+            i:nth-child(4),i:nth-child(6) {
+              margin-right: 350px;
+            }
+          }
         }
-        .list {
-          width: 100%;
-          border-bottom: 1px solid #464646;
-          margin-top: 33px;
-        }
-      }
-    }
-    .footer__bottom {
-      p {
-        margin-top: 25px;
-      }
-      &__pay {
-        margin-top: 20px;
-        width: 240px;
-        float: none;
       }
     }
   }
 }
 
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {  }
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {  }
-
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {  }
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+  @include responsiveFooter;
+  footer {
+    .layout {
+      .container {
+        .row {
+          .contact {
+            i.fas.fa-map-marker-alt {
+              width: 100%;
+            }
+            i:nth-child(4),i:nth-child(6) {
+              margin-right: 420px;
+              width: 290px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // Extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width
