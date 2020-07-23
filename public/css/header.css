@@ -416,6 +416,9 @@ header .container .header__right__search {
   header .container nav label {
     right: 185px;
   }
+  header .container nav #menu:checked ~ ul {
+    left: -180px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .container {
@@ -486,6 +489,9 @@ header .container .header__right__search {
   header .container nav label {
     right: 225px;
   }
+  header .container nav #menu:checked ~ ul {
+    left: -225px;
+  }
 }
 @media (min-width: 1200px) and (max-width: 1366px) {
   .container {
@@ -555,6 +561,9 @@ header .container .header__right__search {
 
   header .container nav label {
     right: 300px;
+  }
+  header .container nav #menu:checked ~ ul {
+    left: -300px;
   }
 }
 
