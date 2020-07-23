@@ -130,37 +130,7 @@ section.thread {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-  section.thread {
-    flex-wrap: wrap;
-    .sidebar {
-      width: 20%;
-      margin-top: 0;
-    }
-    .image {
-      width: 78%;
-      height: 306px;
-      background-size: contain;
-      margin-top: 5px;
-    }
-    .product {
-      width: 100%;
-      margin-top: 40px;
-      h1 {
-        font-size: 18px;
-      }
-      select {
-        width: 90%;
-      }
-      &__footer {
-        flex-direction: column;
-        margin-top: 25px;
-        &__icon {
-          width: 370px;
-          margin-top: 25px;
-        }
-      }
-    }
-  }
+  @include responsiveProductThread;
 }
 
 // Small devices (landscape phones, less than 768px)
@@ -175,6 +145,10 @@ section.thread {
 
 // Large devices (desktops, less than 1200px)
 @media (min-width: 992px) and (max-width: 1199.98px) {  
+  @include responsiveProductThread;
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
   @include responsiveProductThread;
 }
 

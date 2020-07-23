@@ -155,6 +155,13 @@ footer .footer__bottom__pay {
     width: 240px;
     float: none;
   }
+
+  footer .layout .container .row .contact i.fas.fa-map-marker-alt {
+    width: 100%;
+  }
+  footer .layout .container .row .contact i:nth-child(4), footer .layout .container .row .contact i:nth-child(6) {
+    margin-right: 333px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   footer .layout .row {
@@ -212,6 +219,35 @@ footer .footer__bottom__pay {
   }
   footer .layout .container .row .contact i:nth-child(4), footer .layout .container .row .contact i:nth-child(6) {
     margin-right: 200px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1366px) {
+  footer .layout .row {
+    flex-direction: column;
+  }
+  footer .layout .row .contact {
+    width: 100%;
+    border-bottom: 1px solid #464646;
+  }
+  footer .layout .row .list {
+    width: 100%;
+    border-bottom: 1px solid #464646;
+    margin-top: 33px;
+  }
+  footer .footer__bottom p {
+    margin-top: 25px;
+  }
+  footer .footer__bottom__pay {
+    margin-top: 20px;
+    width: 240px;
+    float: none;
+  }
+
+  footer .layout .container .row .contact i.fas.fa-map-marker-alt {
+    width: 100%;
+  }
+  footer .layout .container .row .contact i:nth-child(4), footer .layout .container .row .contact i:nth-child(6) {
+    margin-right: 400px;
   }
 }
 

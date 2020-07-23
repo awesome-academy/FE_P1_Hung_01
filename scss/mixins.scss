@@ -260,3 +260,68 @@ $listBlog: "../../images/image11.png", "../../images/image12.png", "../../images
     }
   }
 }
+
+@mixin responsiveGrid {
+  section.main {
+    margin-top: 40px;
+    flex-direction: column;
+    sidebar {
+      width: 100%;
+      .image {
+        display: none;
+      }
+    }
+    .content {
+      width: 100%;
+      .products {
+        .product {
+          width: 45%;
+          margin: 60px 0;
+          &__image {
+            background-size: contain;
+          }
+          &__action {
+            display: none;
+          }
+        }
+        .product:nth-child(5), .product:nth-child(6) {
+          display: none;
+        }
+        .product:hover .product__action {
+          opacity: 0;
+        }
+        .product:hover .product__detail i:nth-child(4) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@mixin responsiveList {
+  section.main {
+    .content {
+      .header {
+        margin-top: 50px;
+      }
+      .listProducts {
+        .product {
+          flex-direction: column;
+          &__image {
+            width: 100%;
+          }
+          &__detail {
+            width: 100%;
+            h1 {
+              @include customFont(16px, "openSans");
+              margin-top: 40px;
+            }
+            &__description {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

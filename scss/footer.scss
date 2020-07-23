@@ -113,6 +113,22 @@ footer {
 // Small devices (landscape phones, less than 768px)
 @media (min-width: 576px) and (max-width: 767.98px) {  
   @include responsiveFooter;
+  footer {
+    .layout {
+      .container {
+        .row {
+          .contact {
+            i.fas.fa-map-marker-alt {
+              width: 100%;
+            }
+            i:nth-child(4),i:nth-child(6) {
+              margin-right: 333px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Medium devices (tablets, less than 992px)
@@ -149,6 +165,26 @@ footer {
             }
             i:nth-child(4),i:nth-child(6) {
               margin-right: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  @include responsiveFooter;
+  footer {
+    .layout {
+      .container {
+        .row {
+          .contact {
+            i.fas.fa-map-marker-alt {
+              width: 100%;
+            }
+            i:nth-child(4),i:nth-child(6) {
+              margin-right: 400px;
             }
           }
         }

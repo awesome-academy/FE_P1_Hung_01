@@ -66,6 +66,97 @@ section.main .content .listProducts .product__action i:hover {
 }
 
 @media (max-width: 575.98px) {
+  section.main .content .header {
+    margin-top: 50px;
+  }
+  section.main .content .listProducts .product {
+    flex-direction: column;
+  }
+  section.main .content .listProducts .product__image {
+    width: 100%;
+  }
+  section.main .content .listProducts .product__detail {
+    width: 100%;
+  }
+  section.main .content .listProducts .product__detail h1 {
+    font-size: 16px;
+    font-family: "openSans";
+    margin-top: 40px;
+  }
+  section.main .content .listProducts .product__detail__description {
+    display: inline;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  section.main .content .header {
+    margin-top: 50px;
+  }
+  section.main .content .listProducts .product {
+    flex-direction: column;
+  }
+  section.main .content .listProducts .product__image {
+    width: 100%;
+  }
+  section.main .content .listProducts .product__detail {
+    width: 100%;
+  }
+  section.main .content .listProducts .product__detail h1 {
+    font-size: 16px;
+    font-family: "openSans";
+    margin-top: 40px;
+  }
+  section.main .content .listProducts .product__detail__description {
+    display: inline;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  section.main .content .header {
+    margin-top: 50px;
+  }
+  section.main .content .listProducts .product {
+    flex-direction: column;
+  }
+  section.main .content .listProducts .product__image {
+    width: 100%;
+  }
+  section.main .content .listProducts .product__detail {
+    width: 100%;
+  }
+  section.main .content .listProducts .product__detail h1 {
+    font-size: 16px;
+    font-family: "openSans";
+    margin-top: 40px;
+  }
+  section.main .content .listProducts .product__detail__description {
+    display: inline;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  section.main .content .header {
+    margin-top: 50px;
+  }
+  section.main .content .listProducts .product {
+    flex-direction: column;
+  }
+  section.main .content .listProducts .product__image {
+    width: 100%;
+  }
+  section.main .content .listProducts .product__detail {
+    width: 100%;
+  }
+  section.main .content .listProducts .product__detail h1 {
+    font-size: 16px;
+    font-family: "openSans";
+    margin-top: 40px;
+  }
+  section.main .content .listProducts .product__detail__description {
+    display: inline;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1366px) {
+  section.main .content .header {
+    margin-top: 50px;
+  }
   section.main .content .listProducts .product {
     flex-direction: column;
   }
