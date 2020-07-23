@@ -92,18 +92,24 @@ section.blog {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {  
+  @include responsiveBlog;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  @include responsiveBlog;
   section.blog {
     .content {
       .main {
         .listBlog {
-          flex-direction: column;
+          flex-wrap: wrap;
+          flex-direction: row;
           .blog {
-            width: 100%;
-            margin-top: 40px;
+            width: 48%;
           }
-          @for $i from 4 to 10 {
+          @for $i from 4 to 7 {
             .blog:nth-child(#{$i}) {
-              display: none;
+              display: block;
             }
           } 
         }
@@ -112,14 +118,73 @@ section.blog {
   }
 }
 
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {  }
-
 // Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {  }
+@media (min-width: 768px) and (max-width: 991.98px) {  
+  @include responsiveBlog;
+  section.blog {
+    .content {
+      .main {
+        .listBlog {
+          flex-wrap: wrap;
+          flex-direction: row;
+          .blog {
+            width: 48%;
+          }
+          @for $i from 4 to 7 {
+            .blog:nth-child(#{$i}) {
+              display: block;
+            }
+          } 
+        }
+      }
+    }
+  }
+}
 
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {  }
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+  @include responsiveBlog;
+  section.blog {
+    .content {
+      .main {
+        .listBlog {
+          flex-wrap: wrap;
+          flex-direction: row;
+          .blog {
+            width: 48%;
+          }
+          @for $i from 4 to 7 {
+            .blog:nth-child(#{$i}) {
+              display: block;
+            }
+          } 
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) { 
+  @include responsiveBlog;
+  section.blog {
+    .content {
+      .main {
+        .listBlog {
+          flex-wrap: wrap;
+          flex-direction: row;
+          .blog {
+            width: 48%;
+          }
+          @for $i from 4 to 7 {
+            .blog:nth-child(#{$i}) {
+              display: block;
+            }
+          } 
+        }
+      }
+    }
+  }
+}
 
 // Extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width

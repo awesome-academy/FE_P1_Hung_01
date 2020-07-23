@@ -325,3 +325,24 @@ $listBlog: "../../images/image11.png", "../../images/image12.png", "../../images
     }
   }
 }
+
+@mixin responsiveBlog {
+  section.blog {
+    .content {
+      .main {
+        .listBlog {
+          flex-direction: column;
+          .blog {
+            width: 100%;
+            margin-top: 40px;
+          }
+          @for $i from 4 to 10 {
+            .blog:nth-child(#{$i}) {
+              display: none;
+            }
+          } 
+        }
+      }
+    }
+  }
+}
