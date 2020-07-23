@@ -42,6 +42,7 @@ section.navbar {
     height: 495px;
     .layout {
       @include customBackground("../../images/image30.jpg", 100%, 580px);
+      background-position: center;
       .content {
         top: 305px;
         left: 0;
@@ -64,13 +65,116 @@ section.navbar {
 }
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {  }
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  section.navbar {
+    height: 451px;
+    .layout {
+      @include customBackground("../../images/image32.jpg", 100%, 537px);
+      background-position: center;
+      .content {
+        top: 245px;
+        left: 0;
+        text-align: center;
+        width: 340px;
+        h1 {
+          font-size: 88px;
+        }
+        p {
+          font-size: 16px;
+          width: 220px;
+          margin-left: 42.5px;
+        }
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
 
 // Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {  }
+@media (min-width: 768px) and (max-width: 991.98px) {  
+  section.navbar {
+    height: 451px;
+    .layout {
+      @include customBackground("../../images/image32.jpg", 100%, 537px);
+      background-position: center;
+      .content {
+        top: 245px;
+        left: 0;
+        text-align: center;
+        width: 340px;
+        h1 {
+          font-size: 88px;
+        }
+        p {
+          font-size: 16px;
+          width: 220px;
+          margin-left: 42.5px;
+        }
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
 
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {  }
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+  section.navbar {
+    height: 451px;
+    .layout {
+      @include customBackground("../../images/image32.jpg", 100%, 537px);
+      background-position: center;
+      .content {
+        top: 245px;
+        left: 120px;
+        text-align: center;
+        width: 340px;
+        h1 {
+          font-size: 88px;
+        }
+        p {
+          font-size: 16px;
+          width: 220px;
+          margin-left: 42.5px;
+        }
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {  
+  section.navbar {
+    height: 451px;
+    .layout {
+      @include customBackground("../../images/image32.jpg", 100%, 537px);
+      background-position: center;
+      background-size: cover;
+      .content {
+        top: 245px;
+        left: 275px;
+        text-align: center;
+        width: 340px;
+        h1 {
+          font-size: 88px;
+        }
+        p {
+          font-size: 16px;
+          width: 220px;
+          margin-left: 42.5px;
+        }
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
 
 // Extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width

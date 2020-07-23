@@ -117,7 +117,7 @@ section.listProduct {
         background: $colorWhite;
         padding-top: 27px;
         text-align: center;
-        display: none;
+        opacity: 0;
         transition: 0.5s;
         span {
           @include customFont(14px, "openSansBold");
@@ -147,7 +147,7 @@ section.listProduct {
       }
     }
     .product:hover .product__action {
-      display: block;
+      opacity: 1;
       transition: 0.5s;
     }
     .product:hover .product__detail i:nth-child(4) {
@@ -182,34 +182,30 @@ section.listProduct {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
+  @include responsiveListProducts;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  @include responsiveListProducts;
   section.listProduct {
     .sale {
       ul {
-        flex-direction: column;
-        margin: 65px 0;
-        align-items: flex-start;
-        li {
-          border: none  !important;
-        }
         .active::after {
-          top: 95px;
-          margin-left: -113.5px;
+          margin-left: -149.5px;
         }
       }
     }
-    .list {
-      ul {
-        flex-wrap: wrap;
-        li {
-          width: 140px;
-          margin: 0 25px;
-        }
-        li:nth-child(1) {
-          list-style: outside;
-        }
-      }
-    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (min-width: 768px) and (max-width: 991.98px) {  
+  section.listProduct {
     .products {
+      padding-top: 60px;
+      width: 60%;
+      margin: auto;
       @for $i from 1 to 7 {
         .product:nth-child(#{$i}) {
           display: none;
@@ -217,10 +213,64 @@ section.listProduct {
       }
       .product:nth-child(2) {
         display: block;
-        width: 100%;
-        .product__action {
-          display: block;
+        width: 50%;
+      }
+      .product:nth-child(3) {
+        display: block;
+        width: 50%;
+      }
+    }
+    .icon {
+      display: none;
+    }
+  };
+}
+
+// Large devices (desktops, less than 1200px)
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+  section.listProduct {
+    .products {
+      padding-top: 60px;
+      width: 60%;
+      margin: auto;
+      @for $i from 1 to 7 {
+        .product:nth-child(#{$i}) {
+          display: none;
         }
+      }
+      .product:nth-child(2) {
+        display: block;
+        width: 40%;
+      }
+      .product:nth-child(3) {
+        display: block;
+        width: 40%;
+      }
+    }
+    .icon {
+      display: none;
+    }
+  };
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  section.listProduct {
+    .products {
+      padding-top: 60px;
+      width: 60%;
+      margin: auto;
+      @for $i from 1 to 7 {
+        .product:nth-child(#{$i}) {
+          display: none;
+        }
+      }
+      .product:nth-child(2) {
+        display: block;
+        width: 30%;
+      }
+      .product:nth-child(3) {
+        display: block;
+        width: 30%;
       }
     }
     .icon {
@@ -228,15 +278,6 @@ section.listProduct {
     }
   }
 }
-
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {  }
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {  }
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {  }
 
 // Extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width

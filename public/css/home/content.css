@@ -246,6 +246,13 @@ section.content .comment__text__icon span:nth-child(2) {
   }
   section.content .row .col .image {
     height: 490px;
+    background-position: center;
+    background-size: cover;
+  }
+  section.content .row:nth-child(2) .col .image {
+    height: 490px;
+    background-position: center;
+    background-size: cover;
   }
   section.content .comment {
     flex-wrap: wrap-reverse;
@@ -291,6 +298,231 @@ section.content .comment__text__icon span:nth-child(2) {
   }
   section.content .comment__text__icon {
     text-align: center;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  section.content .row {
+    flex-direction: column;
+  }
+  section.content .row .col {
+    width: 100%;
+  }
+  section.content .row .col .product__image {
+    height: 245px !important;
+  }
+  section.content .row .col .product__name {
+    height: 245px !important;
+  }
+  section.content .row .col .image {
+    height: 490px;
+    background-position: center;
+    background-size: cover;
+  }
+  section.content .row:nth-child(2) .col .image {
+    height: 490px;
+    background-position: center;
+    background-size: cover;
+  }
+  section.content .comment {
+    flex-wrap: wrap-reverse;
+    height: auto;
+    background-position: center;
+  }
+  section.content .comment__image {
+    margin: 30px 10px 30px 30px;
+    position: relative;
+  }
+  section.content .comment__image::before {
+    position: absolute;
+    top: 45px;
+    left: 145px;
+    z-index: 2;
+    font-size: 14px;
+    font-family: "openSans";
+    content: "TUTILE";
+  }
+  section.content .comment__image::after {
+    position: absolute;
+    top: 70px;
+    left: 145px;
+    z-index: 2;
+    width: 200px;
+    height: 0;
+    font-size: 14px;
+    font-family: "openSansItalic";
+    content: "Giám đốc phát triển sản phẩm";
+    color: #737373;
+  }
+  section.content .comment__text {
+    width: 100%;
+    margin: 0;
+  }
+  section.content .comment__text__content {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  section.content .comment__text__title {
+    display: none;
+  }
+  section.content .comment__text__icon {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  section.content .row {
+    flex-direction: column;
+  }
+  section.content .row .col {
+    width: 100%;
+  }
+  section.content .row .col .product__image {
+    height: 245px !important;
+  }
+  section.content .row .col .product__name {
+    height: 245px !important;
+  }
+  section.content .row .col .image {
+    height: 490px;
+    background-position: center;
+    background-size: cover;
+  }
+  section.content .row:nth-child(2) .col .image {
+    height: 490px;
+    background-position: center;
+    background-size: cover;
+  }
+  section.content .comment {
+    flex-wrap: wrap-reverse;
+    height: auto;
+    background-position: center;
+  }
+  section.content .comment__image {
+    margin: 30px 10px 30px 30px;
+    position: relative;
+  }
+  section.content .comment__image::before {
+    position: absolute;
+    top: 45px;
+    left: 145px;
+    z-index: 2;
+    font-size: 14px;
+    font-family: "openSans";
+    content: "TUTILE";
+  }
+  section.content .comment__image::after {
+    position: absolute;
+    top: 70px;
+    left: 145px;
+    z-index: 2;
+    width: 200px;
+    height: 0;
+    font-size: 14px;
+    font-family: "openSansItalic";
+    content: "Giám đốc phát triển sản phẩm";
+    color: #737373;
+  }
+  section.content .comment__text {
+    width: 100%;
+    margin: 0;
+  }
+  section.content .comment__text__content {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  section.content .comment__text__title {
+    display: none;
+  }
+  section.content .comment__text__icon {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  section.content .row {
+    flex-direction: column;
+  }
+  section.content .row .col {
+    width: 100%;
+  }
+  section.content .row .col .product__image {
+    height: 245px !important;
+  }
+  section.content .row .col .product__name {
+    height: 245px !important;
+  }
+  section.content .row .col .image {
+    height: 490px;
+    background-position: center;
+    background-size: cover;
+  }
+  section.content .row:nth-child(2) .col .image {
+    height: 490px;
+    background-position: center;
+    background-size: cover;
+  }
+  section.content .comment {
+    flex-wrap: wrap-reverse;
+    height: auto;
+    background-position: center;
+  }
+  section.content .comment__image {
+    margin: 30px 10px 30px 30px;
+    position: relative;
+  }
+  section.content .comment__image::before {
+    position: absolute;
+    top: 45px;
+    left: 145px;
+    z-index: 2;
+    font-size: 14px;
+    font-family: "openSans";
+    content: "TUTILE";
+  }
+  section.content .comment__image::after {
+    position: absolute;
+    top: 70px;
+    left: 145px;
+    z-index: 2;
+    width: 200px;
+    height: 0;
+    font-size: 14px;
+    font-family: "openSansItalic";
+    content: "Giám đốc phát triển sản phẩm";
+    color: #737373;
+  }
+  section.content .comment__text {
+    width: 100%;
+    margin: 0;
+  }
+  section.content .comment__text__content {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  section.content .comment__text__title {
+    display: none;
+  }
+  section.content .comment__text__icon {
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1366px) {
+  section.content .row .col .product__image {
+    height: 190px !important;
+  }
+  section.content .row .col .product__name {
+    height: 190px !important;
+  }
+  section.content .row .col .image {
+    height: 390px;
+    background-position: center;
+    background-size: cover;
+  }
+  section.content .row:nth-child(2) .col .image {
+    height: 390px;
+    background-position: center;
+    background-size: cover;
   }
 }
 

@@ -1,7 +1,6 @@
 @import "../mixins";
 
 .contact {
-  margin-bottom: 90px;
   &__icon {
     @include customFont(14px, "openSansBold");
     margin: {
@@ -35,6 +34,7 @@
   &__description {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 90px;
     .introduction {
       @include customContactTitle();
       &__logo {
@@ -101,27 +101,32 @@
     }
     .email {
       @include customContactTitle();
-      input {
-        @include customFont(12px, "openSansBold");
-        width: 97%;
-        margin-left: 1px;
-        padding: 13px 20px;
-      }
-      p {
-        @include customFont(12px, "openSans");
-        margin: 12px 0;
-        text-align: center;
-      }
-      .email__btn {
-        @include customPosition(relative, 0, 50%, 2, 24px, auto, true);
-        display: inline-block;
-        background: #1b1b1b;
-        color: $colorWhite;
-        padding: 10px 27px;
-        text-align: center;
-        margin: {
-          bottom: 30px;
-          left: -25.5px;
+      width: 32%;
+      flex-direction: column;
+      .col {
+        width: 100%;
+        input {
+          @include customFont(12px, "openSansBold");
+          width: 96%;
+          margin-left: 1px;
+          padding: 13px 20px;
+        }
+        p {
+          @include customFont(12px, "openSans");
+          margin: 12px 0;
+          text-align: center;
+        }
+        .email__btn {
+          @include customPosition(relative, 0, 50%, 2, 24px, auto, true);
+          display: inline-block;
+          background: #1b1b1b;
+          color: $colorWhite;
+          padding: 10px 27px;
+          text-align: center;
+          margin: {
+            bottom: 30px;
+            left: -25.5px;
+          }
         }
       }
       .tag {
@@ -135,44 +140,65 @@
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {  
+  @include responsiveContact($numberThree);
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  @include responsiveContact($numberFive);
+}
+
+// Medium devices (tablets, less than 992px)
+@media (min-width: 768px) and (max-width: 991.98px) {  
+  @include responsiveContact($numberThree);
+}
+
+// Large devices (desktops, less than 1200px)
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+  @include responsiveContact($numberFive);
   .contact {
-    &__icon {
-      display: flex;
-      @for $i from 1 to 7 {
-        i:nth-child(#{$i}) {
-          display: none;
-        }
-      }
-      @for $i from 1 to 3 {
-        i:nth-child(#{$i}) {
-          display: block;
-          width: 50%;
-          border-top: 1px solid #dadada;
-          padding-top: 45px;
-        }
-      }
-    }
     &__description {
-      flex-direction: column;
+      flex-wrap: wrap;
+      flex-direction: row;
       .introduction, .blog {
-        width: 100%;
+        width: 48%;
         margin-bottom: 50px;
       }
       .email {
         width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        .col, .tag {
+          width: 48%;
+          overflow: hidden;
+        }
       }
     } 
   }
 }
 
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {  }
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {  }
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {  }
+@media (min-width: 1200px) and (max-width: 1366px) {
+  @include responsiveContact($numberFive);
+  .contact {
+    &__description {
+      flex-wrap: wrap;
+      flex-direction: row;
+      .introduction, .blog {
+        width: 48%;
+        margin-bottom: 50px;
+      }
+      .email {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        .col, .tag {
+          width: 48%;
+          overflow: hidden;
+        }
+      }
+    } 
+  }
+}
 
 // Extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width

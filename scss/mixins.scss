@@ -5,6 +5,8 @@ $colorBlack: #000;
 $listSale: "../../images/plane.png", "../../images/gift.png", "../../images/star.png";
 $listProduct: "../../images/image9.jpg", "../../images/image10.jpg", "../../images/image11.jpg", "../../images/image12.jpg", "../../images/image13.jpg", "../../images/image14.jpg";
 $listBlog: "../../images/image11.png", "../../images/image12.png", "../../images/image13.png", "../../images/image14.png", "../../images/image15.png", "../../images/image16.png", "../../images/image17.png", "../../images/image18.png";
+$numberThree: 3;
+$numberFive: 5;
 
 // mixin
 @mixin customFontFace($fontFamily, $src) {
@@ -344,5 +346,167 @@ $listBlog: "../../images/image11.png", "../../images/image12.png", "../../images
         }
       }
     }
+  }
+}
+
+@mixin responsiveContent {
+  section.content {
+    .row {
+      flex-direction: column;
+      .col {
+        width: 100%;
+        .product {
+          &__image {
+            height: 245px !important;
+          }
+
+          &__name {
+            height: 245px !important;
+          }
+        }
+        .image {
+          height: 490px;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+    .row:nth-child(2) {
+      .col {
+        .image {
+          height: 490px;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+    .comment {
+      flex-wrap: wrap-reverse;
+      height: auto;
+      background-position: center;
+      &__image {
+        margin: 30px 10px 30px 30px;
+        position: relative;
+      }
+      &__image::before {
+        @include customPosition(absolute, 45px, 145px, 2, 0, 0, false);
+        @include customFont(14px, "openSans");
+        content: "TUTILE";
+      }
+      &__image::after {
+        @include customPosition(absolute, 70px, 145px, 2, 200px, 0, true);
+        @include customFont(14px, "openSansItalic");
+        content: "Giám đốc phát triển sản phẩm";
+        color: #737373;
+      }
+      &__text {
+        width: 100%;
+        margin: 0;
+        &__content {
+          font-size: 14px;
+          text-align: center;
+          margin: 20px 0;
+        }
+        &__title {
+          display: none;
+        }
+        &__icon {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@mixin responsiveListProducts {
+  section.listProduct {
+    .sale {
+      ul {
+        flex-direction: column;
+        margin: 65px 0;
+        align-items: flex-start;
+        li {
+          border: none  !important;
+        }
+        .active::after {
+          top: 95px;
+          margin-left: -113.5px;
+        }
+      }
+    }
+    .list {
+      ul {
+        flex-wrap: wrap;
+        li {
+          width: 140px;
+          margin: 0 25px;
+        }
+        li:nth-child(1) {
+          list-style: outside;
+        }
+      }
+    }
+    .products {
+      @for $i from 1 to 7 {
+        .product:nth-child(#{$i}) {
+          display: none;
+        }
+      }
+      .product:nth-child(2) {
+        display: block;
+        width: 100%;
+        .product__action {
+          display: block;
+        }
+      }
+      .product:hover .product__action {
+        opacity: 0;
+      }
+      .product:hover .product__detail i:nth-child(4) {
+        display: none;
+      }
+    }
+    .icon {
+      display: none;
+    }
+  }
+}
+
+@mixin responsiveContact($number) {
+  .contact {
+    &__icon {
+      display: flex;
+      @for $i from 1 to 7 {
+        i:nth-child(#{$i}) {
+          display: none;
+        }
+      }
+      @for $i from 1 to $number {
+        i:nth-child(#{$i}) {
+          display: block;
+          width: 50%;
+          border-top: 1px solid #dadada;
+          padding-top: 45px;
+        }
+      }
+    }
+    &__description {
+      flex-direction: column;
+      .introduction, .blog {
+        width: 100%;
+        margin-bottom: 50px;
+      }
+      .email {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .col {
+          width: 100%;
+          input {
+            margin-left: 3px;
+          }
+        }
+      }
+    } 
   }
 }
