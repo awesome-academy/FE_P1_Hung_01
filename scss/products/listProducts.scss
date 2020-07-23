@@ -1,0 +1,96 @@
+@import '../mixins';
+
+section.main {
+  .content {
+    .listProducts {
+      margin-top: 45px;
+      .product {
+        margin-bottom: 54px;
+        display: flex;
+        justify-content: space-between;
+        &__image {
+          @include customBackground("../../images/image12.jpg", 270px, 300px);
+          background-position: center;
+          border-bottom: 1px dashed $colorGray;
+        }
+        &__detail {
+          h1 {
+            @include customFont(18px, "openSans");
+            padding-bottom: 15px;
+          }
+          &__icon {
+            @include customFont(16px, "openSansLight");
+            i{
+              margin: 0 3px 22px 0;
+            }
+            p {
+              display: inline;
+            }
+          }
+          &__description {
+            @include customFont(14px, "openSans");
+            color: #adadad;
+          }
+          h2 {
+            @include customFont(24px, "lobster");
+            margin: 25px 0;
+          }
+        }
+        &__action {
+          span {
+            @include customFont(14px, "openSansBold");
+            padding: 10px;
+            border: 1px solid #b4b4b4;
+            border-radius: 10px;
+            transition: 0.5s;
+          }
+          span:hover {
+            background: $colorGreen;
+            color: $colorWhite;
+            transition: 0.5s;
+          }
+          i {
+            font-size: 14px;
+            padding: 12px;
+            border: 1px solid #b4b4b4;
+            border-radius: 10px;
+            transition: 0.5s;
+            margin-left: 10px;
+          }
+          i:hover {
+            background: $colorGreen;
+            color: $colorWhite;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {  
+  @include responsiveList;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  @include responsiveList;
+}
+
+// Medium devices (tablets, less than 992px)
+@media (min-width: 768px) and (max-width: 991.98px) {  
+  @include responsiveList;
+}
+
+// Large devices (desktops, less than 1200px)
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+  @include responsiveList;
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  @include responsiveList;
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

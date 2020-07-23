@@ -1,0 +1,190 @@
+@import "../mixins";
+
+section.blog {
+  margin: 30px auto 85px auto;
+  h1 {
+    @include customFont(28px, "openSans");
+    text-transform: uppercase;
+    color: #212121;
+    margin-bottom: 30px;
+  }
+  .content {
+    .header,.footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      padding: 11px 0;
+      border-bottom: 1px solid $colorGray;
+      .type {
+        a {
+          color: #212121;
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+      .list {
+        span {
+          margin: 0 10px;
+          cursor: pointer;
+        }
+        span:hover {
+          color: $colorGreen;
+        }
+      }
+    }
+    .main {
+      .listBlog {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        .blog {
+          width: 32%;
+          &__image {
+            @include customBackground("../../images/image10.png", 100%, 190px);
+            background-position: center;
+          }
+          h2 {
+            @include customFont(18px, "openSans");
+            padding: 5px 0 10px 0;
+            color: #202020;
+            text-transform: uppercase;
+            border-bottom: 1px solid $colorGray;
+          }
+          p {
+            @include customFont(14px, "openSans");
+            color: #6d6d6d;
+            padding: 10px 0 15px 0;
+            width: 100%;
+          }
+          i {
+            @include customFont(14px, "openSans");
+            color: #b4b4b4;
+            border-bottom: 1px solid $colorGray;
+            padding-bottom: 15px;
+            display: block;
+          }
+          &__footer {
+            display: flex;
+            justify-content: space-between;
+            span {
+              @include customFont(14px, "openSans");
+              color: #b4b4b4;
+              padding-top: 10px;
+              cursor: pointer;
+            }
+          }
+        }
+        @for $i from 2 to 10 {
+          $item: nth($listBlog, $n: $i - 1);
+          .blog:nth-child(#{$i}) {
+            .blog__image {
+              @include customBackground($item, 100%, 190px);
+              background-position: center;
+            }
+          }
+        } 
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {  
+  @include responsiveBlog;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  @include responsiveBlog;
+  section.blog {
+    .content {
+      .main {
+        .listBlog {
+          flex-wrap: wrap;
+          flex-direction: row;
+          .blog {
+            width: 48%;
+          }
+          @for $i from 4 to 7 {
+            .blog:nth-child(#{$i}) {
+              display: block;
+            }
+          } 
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (min-width: 768px) and (max-width: 991.98px) {  
+  @include responsiveBlog;
+  section.blog {
+    .content {
+      .main {
+        .listBlog {
+          flex-wrap: wrap;
+          flex-direction: row;
+          .blog {
+            width: 48%;
+          }
+          @for $i from 4 to 7 {
+            .blog:nth-child(#{$i}) {
+              display: block;
+            }
+          } 
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+  @include responsiveBlog;
+  section.blog {
+    .content {
+      .main {
+        .listBlog {
+          flex-wrap: wrap;
+          flex-direction: row;
+          .blog {
+            width: 48%;
+          }
+          @for $i from 4 to 7 {
+            .blog:nth-child(#{$i}) {
+              display: block;
+            }
+          } 
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) { 
+  @include responsiveBlog;
+  section.blog {
+    .content {
+      .main {
+        .listBlog {
+          flex-wrap: wrap;
+          flex-direction: row;
+          .blog {
+            width: 48%;
+          }
+          @for $i from 4 to 7 {
+            .blog:nth-child(#{$i}) {
+              display: block;
+            }
+          } 
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

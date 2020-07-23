@@ -1,0 +1,37 @@
+section.blogDetail.container
+  h1 Blog 
+  .main 
+    .sidebar 
+      h2 Bài viết mới nhất 
+      + customNewBlog
+      + customNewBlog
+      + customNewBlog
+      .tag 
+        .tag__title Tag sản phẩm 
+        for i in tag2
+          span=i
+    .blog 
+      .blog__image 
+      h1 Nàng béo không ngại diện máy áo nổi bật 
+      p Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ qua lại hâm nóng cái blog này vào một ngày đầu hè nóng bức, khi mà dân tình xô nhau đi tắm free để giải nhiệt. Trong tiết xuân hè, nàng ngoại cỡ tháp sáng phong cách bằng quần họa tiết nhiệt đới đi kèm áo sơ my nhã nhặn. Trang phục họa tiết điện tử được nàng phối cùng chân váy kẻ caro, làm lên style vừa hiện đại, vừa phảng phất nét cổ điển. Lối diện đồ hàng ngày đơn giản, khỏe khoắn của cô khi kết hợp chất liệu jean. Nữ blogger rự rỡ khi hòa trộn các gam đồ, hồng, tím ... một cách vui tươi, kèm theo các phụ kiện điệu đà.       
+      i Bởi NamTran (27/05/2015)
+      .blog__footer 
+        span Đọc thêm > 
+        span 23 Bình luận 
+      .tag Tag: 
+        p Men
+      .blog__email
+        h2 Đóng góp ý kiến
+        form.form 
+          .form__input 
+            label(for="name") Tên* 
+            input(type="text" id="name")
+          .form__input 
+            label(for="email") Email* 
+            input(type="text" id="email")
+          .form__input 
+            label(for="message") Ý kiến * 
+            textarea(id="message" name="message" rows="10" cols="50")
+          span GỬI Ý KIẾN 
+
+
