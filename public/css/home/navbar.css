@@ -1,0 +1,189 @@
+section.navbar {
+  position: relative;
+  background-color: #f1f1f1;
+  height: 771px;
+}
+section.navbar .layout {
+  background: url("../../images/bg_image.jpg") no-repeat;
+  width: 100%;
+  height: 857px;
+  position: absolute;
+  top: -86px;
+  left: auto;
+  z-index: 200;
+  background-position: center;
+}
+section.navbar .layout .content {
+  position: absolute;
+  top: 565px;
+  left: 20%;
+  z-index: 200;
+  text-align: center;
+}
+section.navbar .layout .content h1 {
+  color: #789629;
+  font-size: 141px;
+  font-family: "viceroy";
+}
+section.navbar .layout .content p {
+  font-size: 19px;
+  font-family: "openSansLight";
+}
+section.navbar .layout .content h2 {
+  color: #789629;
+  font-size: 34px;
+  font-family: "openSansLight";
+}
+section.navbar .layout .content span {
+  display: inline-block;
+  margin-top: 28px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "openSansLight";
+}
+
+@media (max-width: 575.98px) {
+  section.navbar {
+    height: 495px;
+  }
+  section.navbar .layout {
+    background: url("../../images/image30.jpg") no-repeat;
+    width: 100%;
+    height: 580px;
+    background-position: center;
+  }
+  section.navbar .layout .content {
+    top: 305px;
+    left: 0;
+    text-align: center;
+    width: 340px;
+  }
+  section.navbar .layout .content h1 {
+    font-size: 88px;
+  }
+  section.navbar .layout .content p {
+    font-size: 16px;
+    width: 220px;
+    margin-left: 42.5px;
+  }
+  section.navbar .layout .content h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  section.navbar {
+    height: 451px;
+  }
+  section.navbar .layout {
+    background: url("../../images/image32.jpg") no-repeat;
+    width: 100%;
+    height: 537px;
+    background-position: center;
+  }
+  section.navbar .layout .content {
+    top: 245px;
+    left: 0;
+    text-align: center;
+    width: 340px;
+  }
+  section.navbar .layout .content h1 {
+    font-size: 88px;
+  }
+  section.navbar .layout .content p {
+    font-size: 16px;
+    width: 220px;
+    margin-left: 42.5px;
+  }
+  section.navbar .layout .content h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  section.navbar {
+    height: 451px;
+  }
+  section.navbar .layout {
+    background: url("../../images/image32.jpg") no-repeat;
+    width: 100%;
+    height: 537px;
+    background-position: center;
+  }
+  section.navbar .layout .content {
+    top: 245px;
+    left: 0;
+    text-align: center;
+    width: 340px;
+  }
+  section.navbar .layout .content h1 {
+    font-size: 88px;
+  }
+  section.navbar .layout .content p {
+    font-size: 16px;
+    width: 220px;
+    margin-left: 42.5px;
+  }
+  section.navbar .layout .content h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  section.navbar {
+    height: 451px;
+  }
+  section.navbar .layout {
+    background: url("../../images/image32.jpg") no-repeat;
+    width: 100%;
+    height: 537px;
+    background-position: center;
+  }
+  section.navbar .layout .content {
+    top: 245px;
+    left: 120px;
+    text-align: center;
+    width: 340px;
+  }
+  section.navbar .layout .content h1 {
+    font-size: 88px;
+  }
+  section.navbar .layout .content p {
+    font-size: 16px;
+    width: 220px;
+    margin-left: 42.5px;
+  }
+  section.navbar .layout .content h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1366px) {
+  section.navbar {
+    height: 451px;
+  }
+  section.navbar .layout {
+    background: url("../../images/image32.jpg") no-repeat;
+    width: 100%;
+    height: 537px;
+    background-position: center;
+    background-size: cover;
+  }
+  section.navbar .layout .content {
+    top: 245px;
+    left: 275px;
+    text-align: center;
+    width: 340px;
+  }
+  section.navbar .layout .content h1 {
+    font-size: 88px;
+  }
+  section.navbar .layout .content p {
+    font-size: 16px;
+    width: 220px;
+    margin-left: 42.5px;
+  }
+  section.navbar .layout .content h2 {
+    font-size: 32px;
+  }
+}
+
+/*# sourceMappingURL=navbar.css.map */
