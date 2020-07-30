@@ -1,9 +1,4 @@
-$colorWhite: #fff;
-$colorGreen: #789629;
-$colorGray: #e6e6e6;
-$colorBlack: #000;
-$listSale: "../../images/plane.png", "../../images/gift.png", "../../images/star.png";
-$listProduct: "../../images/image9.jpg", "../../images/image10.jpg", "../../images/image11.jpg", "../../images/image12.jpg", "../../images/image13.jpg", "../../images/image14.jpg";
+@import "variables";
 
 // mixin
 @mixin customFontFace($fontFamily, $src) {
@@ -41,12 +36,14 @@ $listProduct: "../../images/image9.jpg", "../../images/image10.jpg", "../../imag
   .product__image {
     @include customBackground($image1,49.5%, 315px);
     background-position: center;
+    background-size: cover;
     margin-bottom: 10px;
   }
   .product__name {
     @include customBackground($image2,49.5%, 315px);
     position: relative;
     background-position: center;
+    background-size: cover;
     &__arrow {
       @include customPosition(absolute, 50%, -14px, 2, 30px, 30px, true);
       background-color: $color;
@@ -60,7 +57,6 @@ $listProduct: "../../images/image9.jpg", "../../images/image10.jpg", "../../imag
   }
 }
 
-// placeholder
 @mixin customContactTitle {
   width: 32%;
   overflow: hidden;
@@ -91,5 +87,416 @@ $listProduct: "../../images/image9.jpg", "../../images/image10.jpg", "../../imag
     background: $color;
     color: $colorWhite;
     transition: 0.5s;
+  }
+}
+
+@mixin responsiveHeader {
+  .container {
+    width: 56%;
+  }
+  header {
+    .container {
+      nav {
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        label {
+          display: block;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          position: absolute;
+          right: 15px;
+          top: 25px;
+          background: $colorBlack;
+        }
+        label::after {
+          content: '';
+          display: block;
+          width: 20px;
+          height: 2px;
+          background: $colorWhite;
+          margin: 9px 5px;
+          box-shadow: 0px 5px 0px $colorWhite, 0px 10px 0px $colorWhite;
+        }
+      
+        #menu:checked ~ ul {
+          @include customPosition(relative, 85px, auto, 999, 130px, auto, true);
+          display: block;
+        }
+        ul {
+          display: none;
+          flex-direction: column;
+          li {
+            color: $colorGray;
+            padding: 20px;
+            background-color: $colorWhite;
+            i {
+              display: none;
+            }
+          }
+          li:hover .nav__dropdown__content,li:hover .nav__dropdown__icon {
+            display: none;
+          }
+        }
+        
+      }
+      .header__right {
+        &__cart {
+          margin-top: 34px;
+          padding: 0 25px 34px 0;
+        }
+        .dropdown:hover .dropdown__content,.dropdown:hover .dropdown__icon {
+          display: none;
+        }
+        &__search {
+          margin: 34px 68px 0 0;
+          padding: 0 0 34px 0;
+        }
+      }
+    }
+  }
+}
+
+@mixin responsiveFooter {
+  footer {
+    .layout {
+      .row {
+        flex-direction: column;
+        .contact {
+          width: 100%;
+          border-bottom: 1px solid #464646;
+        }
+        .list {
+          width: 100%;
+          border-bottom: 1px solid #464646;
+          margin-top: 33px;
+        }
+      }
+    }
+    .footer__bottom {
+      p {
+        margin-top: 25px;
+      }
+      &__pay {
+        margin-top: 20px;
+        width: 240px;
+        float: none;
+      }
+    }
+  }
+}
+
+@mixin responsiveProductInformation {
+  section.information {
+    .content {
+      width: 100%;
+      &__nav {
+        h1 {
+          @include customFont(10px, "openSansBold");
+        }
+      }
+      &__detail {
+        p {
+          @include customFont(10px, "openSans");
+        }
+        h2 {
+          margin-top: 40px;
+        }
+      }
+      &__detail:nth-child(2), &__detail:nth-child(4) {
+        flex-wrap: wrap-reverse;
+      }
+      &__detail:nth-child(3), &__detail:nth-child(5) {
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+      }
+    }
+    .sidebar {
+      display: none;
+    }
+  }
+}
+
+@mixin responsiveProductThread {
+  section.thread {
+    flex-wrap: wrap;
+    .sidebar {
+      width: 20%;
+      margin-top: 0;
+    }
+    .image {
+      width: 78%;
+      height: 306px;
+      background-size: contain;
+      margin-top: 5px;
+    }
+    .product {
+      width: 100%;
+      margin-top: 40px;
+      h1 {
+        font-size: 18px;
+      }
+      select {
+        width: 90%;
+      }
+      &__footer {
+        flex-direction: column;
+        margin-top: 25px;
+        &__icon {
+          width: 370px;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}
+
+@mixin responsiveGrid {
+  section.main {
+    margin-top: 40px;
+    flex-direction: column;
+    sidebar {
+      width: 100%;
+      .image {
+        display: none;
+      }
+    }
+    .content {
+      width: 100%;
+      .products {
+        .product {
+          width: 45%;
+          margin: 60px 0;
+          &__image {
+            background-size: contain;
+          }
+          &__action {
+            display: none;
+          }
+        }
+        .product:nth-child(5), .product:nth-child(6) {
+          display: none;
+        }
+        .product:hover .product__action {
+          opacity: 0;
+        }
+        .product:hover .product__detail i:nth-child(4) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@mixin responsiveList {
+  section.main {
+    .content {
+      .header {
+        margin-top: 50px;
+      }
+      .listProducts {
+        .product {
+          flex-direction: column;
+          &__image {
+            width: 100%;
+          }
+          &__detail {
+            width: 100%;
+            h1 {
+              @include customFont(16px, "openSans");
+              margin-top: 40px;
+            }
+            &__description {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin responsiveBlog {
+  section.blog {
+    .content {
+      .main {
+        .listBlog {
+          flex-direction: column;
+          .blog {
+            width: 100%;
+            margin-top: 40px;
+          }
+          @for $i from 4 to 10 {
+            .blog:nth-child(#{$i}) {
+              display: none;
+            }
+          } 
+        }
+      }
+    }
+  }
+}
+
+@mixin responsiveContent {
+  section.content {
+    .row {
+      flex-direction: column;
+      .col {
+        width: 100%;
+        .product {
+          &__image {
+            height: 245px !important;
+          }
+
+          &__name {
+            height: 245px !important;
+          }
+        }
+        .image {
+          height: 490px;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+    .row:nth-child(2) {
+      .col {
+        .image {
+          height: 490px;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+    .comment {
+      flex-wrap: wrap-reverse;
+      height: auto;
+      background-position: center;
+      &__image {
+        margin: 30px 10px 30px 30px;
+        position: relative;
+      }
+      &__image::before {
+        @include customPosition(absolute, 45px, 145px, 2, 0, 0, false);
+        @include customFont(14px, "openSans");
+        content: "TUTILE";
+      }
+      &__image::after {
+        @include customPosition(absolute, 70px, 145px, 2, 200px, 0, true);
+        @include customFont(14px, "openSansItalic");
+        content: "Giám đốc phát triển sản phẩm";
+        color: #737373;
+      }
+      &__text {
+        width: 100%;
+        margin: 0;
+        &__content {
+          font-size: 14px;
+          text-align: center;
+          margin: 20px 0;
+        }
+        &__title {
+          display: none;
+        }
+        &__icon {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@mixin responsiveListProducts {
+  section.listProduct {
+    .sale {
+      ul {
+        flex-direction: column;
+        margin: 65px 0;
+        align-items: flex-start;
+        li {
+          border: none  !important;
+        }
+        .active::after {
+          top: 95px;
+          margin-left: -113.5px;
+        }
+      }
+    }
+    .list {
+      ul {
+        flex-wrap: wrap;
+        li {
+          width: 140px;
+          margin: 0 25px;
+        }
+        li:nth-child(1) {
+          list-style: outside;
+        }
+      }
+    }
+    .products {
+      @for $i from 1 to 7 {
+        .product:nth-child(#{$i}) {
+          display: none;
+        }
+      }
+      .product:nth-child(2) {
+        display: block;
+        width: 100%;
+        .product__action {
+          display: block;
+        }
+      }
+      .product:hover .product__action {
+        opacity: 0;
+      }
+      .product:hover .product__detail i:nth-child(4) {
+        display: none;
+      }
+    }
+    .icon {
+      display: none;
+    }
+  }
+}
+
+@mixin responsiveContact($number) {
+  .contact {
+    &__icon {
+      display: flex;
+      @for $i from 1 to 7 {
+        i:nth-child(#{$i}) {
+          display: none;
+        }
+      }
+      @for $i from 1 to $number {
+        i:nth-child(#{$i}) {
+          display: block;
+          width: 50%;
+          border-top: 1px solid #dadada;
+          padding-top: 45px;
+        }
+      }
+    }
+    &__description {
+      flex-direction: column;
+      .introduction, .blog {
+        width: 100%;
+        margin-bottom: 50px;
+      }
+      .email {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .col {
+          width: 100%;
+          input {
+            margin-left: 3px;
+          }
+        }
+      }
+    } 
   }
 }

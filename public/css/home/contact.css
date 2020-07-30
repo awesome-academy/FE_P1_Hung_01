@@ -1,6 +1,3 @@
-.contact {
-  margin-bottom: 90px;
-}
 .contact__icon {
   font-size: 14px;
   font-family: "openSansBold";
@@ -34,6 +31,7 @@
 .contact__description {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 90px;
 }
 .contact__description .introduction {
   width: 32%;
@@ -154,6 +152,8 @@
 .contact__description .email {
   width: 32%;
   overflow: hidden;
+  width: 32%;
+  flex-direction: column;
 }
 .contact__description .email__title {
   font-size: 16px;
@@ -173,20 +173,23 @@
   content: "";
   margin-left: -185px;
 }
-.contact__description .email input {
+.contact__description .email .col {
+  width: 100%;
+}
+.contact__description .email .col input {
   font-size: 12px;
   font-family: "openSansBold";
-  width: 97%;
+  width: 96%;
   margin-left: 1px;
   padding: 13px 20px;
 }
-.contact__description .email p {
+.contact__description .email .col p {
   font-size: 12px;
   font-family: "openSans";
   margin: 12px 0;
   text-align: center;
 }
-.contact__description .email .email__btn {
+.contact__description .email .col .email__btn {
   position: relative;
   top: 0;
   left: 50%;
@@ -237,6 +240,344 @@
   background: #789629;
   color: #fff;
   transition: 0.5s;
+}
+
+@media (max-width: 575.98px) {
+  .contact__icon {
+    display: flex;
+  }
+  .contact__icon i:nth-child(1) {
+    display: none;
+  }
+  .contact__icon i:nth-child(2) {
+    display: none;
+  }
+  .contact__icon i:nth-child(3) {
+    display: none;
+  }
+  .contact__icon i:nth-child(4) {
+    display: none;
+  }
+  .contact__icon i:nth-child(5) {
+    display: none;
+  }
+  .contact__icon i:nth-child(6) {
+    display: none;
+  }
+  .contact__icon i:nth-child(1) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__icon i:nth-child(2) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__description {
+    flex-direction: column;
+  }
+  .contact__description .introduction, .contact__description .blog {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .contact__description .email {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .contact__description .email .col {
+    width: 100%;
+  }
+  .contact__description .email .col input {
+    margin-left: 3px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .contact__icon {
+    display: flex;
+  }
+  .contact__icon i:nth-child(1) {
+    display: none;
+  }
+  .contact__icon i:nth-child(2) {
+    display: none;
+  }
+  .contact__icon i:nth-child(3) {
+    display: none;
+  }
+  .contact__icon i:nth-child(4) {
+    display: none;
+  }
+  .contact__icon i:nth-child(5) {
+    display: none;
+  }
+  .contact__icon i:nth-child(6) {
+    display: none;
+  }
+  .contact__icon i:nth-child(1) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__icon i:nth-child(2) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__icon i:nth-child(3) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__icon i:nth-child(4) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__description {
+    flex-direction: column;
+  }
+  .contact__description .introduction, .contact__description .blog {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .contact__description .email {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .contact__description .email .col {
+    width: 100%;
+  }
+  .contact__description .email .col input {
+    margin-left: 3px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .contact__icon {
+    display: flex;
+  }
+  .contact__icon i:nth-child(1) {
+    display: none;
+  }
+  .contact__icon i:nth-child(2) {
+    display: none;
+  }
+  .contact__icon i:nth-child(3) {
+    display: none;
+  }
+  .contact__icon i:nth-child(4) {
+    display: none;
+  }
+  .contact__icon i:nth-child(5) {
+    display: none;
+  }
+  .contact__icon i:nth-child(6) {
+    display: none;
+  }
+  .contact__icon i:nth-child(1) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__icon i:nth-child(2) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__description {
+    flex-direction: column;
+  }
+  .contact__description .introduction, .contact__description .blog {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .contact__description .email {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .contact__description .email .col {
+    width: 100%;
+  }
+  .contact__description .email .col input {
+    margin-left: 3px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .contact__icon {
+    display: flex;
+  }
+  .contact__icon i:nth-child(1) {
+    display: none;
+  }
+  .contact__icon i:nth-child(2) {
+    display: none;
+  }
+  .contact__icon i:nth-child(3) {
+    display: none;
+  }
+  .contact__icon i:nth-child(4) {
+    display: none;
+  }
+  .contact__icon i:nth-child(5) {
+    display: none;
+  }
+  .contact__icon i:nth-child(6) {
+    display: none;
+  }
+  .contact__icon i:nth-child(1) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__icon i:nth-child(2) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__icon i:nth-child(3) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__icon i:nth-child(4) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__description {
+    flex-direction: column;
+  }
+  .contact__description .introduction, .contact__description .blog {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .contact__description .email {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .contact__description .email .col {
+    width: 100%;
+  }
+  .contact__description .email .col input {
+    margin-left: 3px;
+  }
+
+  .contact__description {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .contact__description .introduction, .contact__description .blog {
+    width: 48%;
+    margin-bottom: 50px;
+  }
+  .contact__description .email {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .contact__description .email .col, .contact__description .email .tag {
+    width: 48%;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .contact__icon {
+    display: flex;
+  }
+  .contact__icon i:nth-child(1) {
+    display: none;
+  }
+  .contact__icon i:nth-child(2) {
+    display: none;
+  }
+  .contact__icon i:nth-child(3) {
+    display: none;
+  }
+  .contact__icon i:nth-child(4) {
+    display: none;
+  }
+  .contact__icon i:nth-child(5) {
+    display: none;
+  }
+  .contact__icon i:nth-child(6) {
+    display: none;
+  }
+  .contact__icon i:nth-child(1) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__icon i:nth-child(2) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__icon i:nth-child(3) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__icon i:nth-child(4) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__description {
+    flex-direction: column;
+  }
+  .contact__description .introduction, .contact__description .blog {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .contact__description .email {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .contact__description .email .col {
+    width: 100%;
+  }
+  .contact__description .email .col input {
+    margin-left: 3px;
+  }
+
+  .contact__description {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .contact__description .introduction, .contact__description .blog {
+    width: 48%;
+    margin-bottom: 50px;
+  }
+  .contact__description .email {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .contact__description .email .col, .contact__description .email .tag {
+    width: 48%;
+    overflow: hidden;
+  }
 }
 
 /*# sourceMappingURL=contact.css.map */

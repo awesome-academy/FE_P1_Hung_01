@@ -11,7 +11,10 @@ header .container .logo {
   background: url("../images/logo.png") no-repeat;
   width: 180px;
   height: 60px;
-  margin: 10px 0;
+  margin: 12px 0;
+}
+header .container nav input {
+  display: none;
 }
 header .container nav ul {
   display: flex;
@@ -182,7 +185,8 @@ header .container .header__right .dropdown__content .total__money {
   color: #789629;
   padding-right: 9px;
 }
-header .container .header__right .dropdown__content span {
+header .container .header__right .dropdown__content a {
+  text-decoration: none;
   padding: 7px 6px;
   background: #212121;
   color: #fff;
@@ -201,6 +205,366 @@ header .container .header__right__search {
   margin-top: 35px;
   margin-left: 24px;
   padding: 0 0 35px 0;
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    width: 56%;
+  }
+
+  header .container nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+  }
+  header .container nav label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    background: #000;
+  }
+  header .container nav label::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    margin: 9px 5px;
+    box-shadow: 0px 5px 0px #fff, 0px 10px 0px #fff;
+  }
+  header .container nav #menu:checked ~ ul {
+    position: relative;
+    top: 85px;
+    left: auto;
+    z-index: 999;
+    width: 130px;
+    height: auto;
+    display: block;
+  }
+  header .container nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  header .container nav ul li {
+    color: #e6e6e6;
+    padding: 20px;
+    background-color: #fff;
+  }
+  header .container nav ul li i {
+    display: none;
+  }
+  header .container nav ul li:hover .nav__dropdown__content, header .container nav ul li:hover .nav__dropdown__icon {
+    display: none;
+  }
+  header .container .header__right__cart {
+    margin-top: 34px;
+    padding: 0 25px 34px 0;
+  }
+  header .container .header__right .dropdown:hover .dropdown__content, header .container .header__right .dropdown:hover .dropdown__icon {
+    display: none;
+  }
+  header .container .header__right__search {
+    margin: 34px 68px 0 0;
+    padding: 0 0 34px 0;
+  }
+
+  .container {
+    width: 98%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    width: 56%;
+  }
+
+  header .container nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+  }
+  header .container nav label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    background: #000;
+  }
+  header .container nav label::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    margin: 9px 5px;
+    box-shadow: 0px 5px 0px #fff, 0px 10px 0px #fff;
+  }
+  header .container nav #menu:checked ~ ul {
+    position: relative;
+    top: 85px;
+    left: auto;
+    z-index: 999;
+    width: 130px;
+    height: auto;
+    display: block;
+  }
+  header .container nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  header .container nav ul li {
+    color: #e6e6e6;
+    padding: 20px;
+    background-color: #fff;
+  }
+  header .container nav ul li i {
+    display: none;
+  }
+  header .container nav ul li:hover .nav__dropdown__content, header .container nav ul li:hover .nav__dropdown__icon {
+    display: none;
+  }
+  header .container .header__right__cart {
+    margin-top: 34px;
+    padding: 0 25px 34px 0;
+  }
+  header .container .header__right .dropdown:hover .dropdown__content, header .container .header__right .dropdown:hover .dropdown__icon {
+    display: none;
+  }
+  header .container .header__right__search {
+    margin: 34px 68px 0 0;
+    padding: 0 0 34px 0;
+  }
+
+  .container {
+    width: 98%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    width: 56%;
+  }
+
+  header .container nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+  }
+  header .container nav label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    background: #000;
+  }
+  header .container nav label::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    margin: 9px 5px;
+    box-shadow: 0px 5px 0px #fff, 0px 10px 0px #fff;
+  }
+  header .container nav #menu:checked ~ ul {
+    position: relative;
+    top: 85px;
+    left: auto;
+    z-index: 999;
+    width: 130px;
+    height: auto;
+    display: block;
+  }
+  header .container nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  header .container nav ul li {
+    color: #e6e6e6;
+    padding: 20px;
+    background-color: #fff;
+  }
+  header .container nav ul li i {
+    display: none;
+  }
+  header .container nav ul li:hover .nav__dropdown__content, header .container nav ul li:hover .nav__dropdown__icon {
+    display: none;
+  }
+  header .container .header__right__cart {
+    margin-top: 34px;
+    padding: 0 25px 34px 0;
+  }
+  header .container .header__right .dropdown:hover .dropdown__content, header .container .header__right .dropdown:hover .dropdown__icon {
+    display: none;
+  }
+  header .container .header__right__search {
+    margin: 34px 68px 0 0;
+    padding: 0 0 34px 0;
+  }
+
+  header .container nav label {
+    right: 185px;
+  }
+  header .container nav #menu:checked ~ ul {
+    left: -180px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    width: 56%;
+  }
+
+  header .container nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+  }
+  header .container nav label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    background: #000;
+  }
+  header .container nav label::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    margin: 9px 5px;
+    box-shadow: 0px 5px 0px #fff, 0px 10px 0px #fff;
+  }
+  header .container nav #menu:checked ~ ul {
+    position: relative;
+    top: 85px;
+    left: auto;
+    z-index: 999;
+    width: 130px;
+    height: auto;
+    display: block;
+  }
+  header .container nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  header .container nav ul li {
+    color: #e6e6e6;
+    padding: 20px;
+    background-color: #fff;
+  }
+  header .container nav ul li i {
+    display: none;
+  }
+  header .container nav ul li:hover .nav__dropdown__content, header .container nav ul li:hover .nav__dropdown__icon {
+    display: none;
+  }
+  header .container .header__right__cart {
+    margin-top: 34px;
+    padding: 0 25px 34px 0;
+  }
+  header .container .header__right .dropdown:hover .dropdown__content, header .container .header__right .dropdown:hover .dropdown__icon {
+    display: none;
+  }
+  header .container .header__right__search {
+    margin: 34px 68px 0 0;
+    padding: 0 0 34px 0;
+  }
+
+  header .container nav label {
+    right: 225px;
+  }
+  header .container nav #menu:checked ~ ul {
+    left: -225px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .container {
+    width: 56%;
+  }
+
+  header .container nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+  }
+  header .container nav label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    background: #000;
+  }
+  header .container nav label::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    margin: 9px 5px;
+    box-shadow: 0px 5px 0px #fff, 0px 10px 0px #fff;
+  }
+  header .container nav #menu:checked ~ ul {
+    position: relative;
+    top: 85px;
+    left: auto;
+    z-index: 999;
+    width: 130px;
+    height: auto;
+    display: block;
+  }
+  header .container nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  header .container nav ul li {
+    color: #e6e6e6;
+    padding: 20px;
+    background-color: #fff;
+  }
+  header .container nav ul li i {
+    display: none;
+  }
+  header .container nav ul li:hover .nav__dropdown__content, header .container nav ul li:hover .nav__dropdown__icon {
+    display: none;
+  }
+  header .container .header__right__cart {
+    margin-top: 34px;
+    padding: 0 25px 34px 0;
+  }
+  header .container .header__right .dropdown:hover .dropdown__content, header .container .header__right .dropdown:hover .dropdown__icon {
+    display: none;
+  }
+  header .container .header__right__search {
+    margin: 34px 68px 0 0;
+    padding: 0 0 34px 0;
+  }
+
+  header .container nav label {
+    right: 300px;
+  }
+  header .container nav #menu:checked ~ ul {
+    left: -300px;
+  }
 }
 
 /*# sourceMappingURL=header.css.map */

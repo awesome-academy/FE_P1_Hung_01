@@ -60,6 +60,7 @@ section.content {
   }
   .comment {
     display: flex;
+    flex-wrap: wrap;
     @include customBackground("../../images/image5.png", 100%, 335px);
     background-position: right;
     &__image {
@@ -111,3 +112,58 @@ section.content {
     
   }
 }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {  
+  @include responsiveContent;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  @include responsiveContent;
+}
+
+// Medium devices (tablets, less than 992px)
+@media (min-width: 768px) and (max-width: 991.98px) {  
+  @include responsiveContent;
+}
+
+// Large devices (desktops, less than 1200px)
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+  @include responsiveContent;
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {  
+  section.content {
+    .row {
+      .col {
+        .product {
+          &__image {
+            height: 190px !important;
+          }
+
+          &__name {
+            height: 190px !important;
+          }
+        }
+        .image {
+          height: 390px;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+    .row:nth-child(2) {
+      .col {
+        .image {
+          height: 390px;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

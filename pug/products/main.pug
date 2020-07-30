@@ -16,7 +16,7 @@ section.main.container
           ul
             for n in listProducts
               li
-                a(href="#")=n
+                a(href="../product/product.html")=n
     h3 So sánh sản phẩm
     p Bạn chưa có sản phẩm nào đe so sánh
     h3 Tag sản phẩm
@@ -28,22 +28,27 @@ section.main.container
   .content
     .header
       .type
-        i.fas.fa-th-large
-        i.fas.fa-list-ul
+        a(href="../products/jewelry.html")
+          i.fas.fa-th-large
+        a(href="../products/listProducts.html")
+          i.fas.fa-list-ul
       .list
         i.fas.fa-caret-left
         span 1
         span 2
         span 3
         i.fas.fa-caret-right
-    .products
-      for i in products
-        .product
-          + customProducts(i)
+    block list
+      .products
+        for i in products
+          .product
+            + customProducts(i)
     .footer
       .type
-        i.fas.fa-th-large
-        i.fas.fa-list-ul
+        a(href="../products/jewelry.html")
+          i.fas.fa-th-large
+        a(href="../products/listProducts.html")
+          i.fas.fa-list-ul
       .list
         i.fas.fa-caret-left
         span 1
