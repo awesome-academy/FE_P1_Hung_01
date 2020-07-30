@@ -1,0 +1,69 @@
+@import '../mixins';
+
+section.main {
+  .content {
+    .listProducts {
+      margin-top: 45px;
+      .product {
+        margin-bottom: 54px;
+        display: flex;
+        justify-content: space-between;
+        &__image {
+          @include customBackground("../../images/image12.jpg", 270px, 300px);
+          background-position: center;
+          border-bottom: 1px dashed $colorGray;
+        }
+        &__detail {
+          h1 {
+            @include customFont(18px, "openSans");
+            padding-bottom: 15px;
+          }
+          &__icon {
+            @include customFont(16px, "openSansLight");
+            i{
+              margin: 0 3px 22px 0;
+            }
+            p {
+              display: inline;
+            }
+          }
+          &__description {
+            @include customFont(14px, "openSans");
+            color: #adadad;
+          }
+          h2 {
+            @include customFont(24px, "lobster");
+            margin: 25px 0;
+          }
+        }
+        &__action {
+          span {
+            @include customFont(14px, "openSansBold");
+            padding: 10px;
+            border: 1px solid #b4b4b4;
+            border-radius: 10px;
+            transition: 0.5s;
+          }
+          span:hover {
+            background: $colorGreen;
+            color: $colorWhite;
+            transition: 0.5s;
+          }
+          i {
+            font-size: 14px;
+            padding: 12px;
+            border: 1px solid #b4b4b4;
+            border-radius: 10px;
+            transition: 0.5s;
+            margin-left: 10px;
+          }
+          i:hover {
+            background: $colorGreen;
+            color: $colorWhite;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
