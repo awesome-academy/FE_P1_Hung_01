@@ -1,0 +1,26 @@
+@import "mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+// font-face
+@include customFontFace(viceroy, "../fonts/UTM ViceroyJF.ttf");
+@include customFontFace(openSansBold, "../fonts/OpenSans-Bold.ttf");
+@include customFontFace(openSansLight, "../fonts/OpenSans-Light.ttf");
+@include customFontFace(openSansItalic, "../fonts/OpenSans-Italic.ttf");
+@include customFontFace(openSansSemiBold, "../fonts/OpenSans-SemiBold.ttf");
+@include customFontFace(openSans, "../fonts/OpenSans-Regular.ttf");
+@include customFontFace(lobster, "../fonts/Lobster-Regular.ttf");
+@include customFontFace(androgyne, "../fonts/UTM Androgyne.ttf");
+@include customFontFace(roboto, "../fonts/Roboto-Regular.ttf");
+
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}

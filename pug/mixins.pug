@@ -1,0 +1,40 @@
+mixin customTable(metadata)
+  tr
+    for n in metadata
+      td
+        a(href="#")=n
+
+mixin customCart(metadata)
+  .cart
+    .cart__image
+    .cart__content
+      p.cart__content__title=metadata.title
+      p.cart__content__money=metadata.money
+        sup đ
+    i.fas.fa-times
+
+mixin customSale(metadata)
+  .col
+    .col__icon
+    p=metadata
+
+mixin customImage
+  .col
+    .image
+      .image__layout
+        .image__layout__icon
+
+mixin customProducts(metadata)
+  .product__image
+  .product__detail
+    h2=metadata.title
+    h3=metadata.content
+    i=metadata.price
+      sup đ
+    i=metadata.sale
+      sup đ
+  .product__action
+    span MUA HÀNG
+    i.fas.fa-heart
+    i.fas.fa-sync-alt
+
