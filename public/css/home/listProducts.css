@@ -241,4 +241,57 @@ section.listProduct .icon__left {
   transform: rotate(180deg);
 }
 
+@media (max-width: 575.98px) {
+  section.listProduct .sale ul {
+    flex-direction: column;
+    margin: 65px 0;
+    align-items: flex-start;
+  }
+  section.listProduct .sale ul li {
+    border: none !important;
+  }
+  section.listProduct .sale ul .active::after {
+    top: 95px;
+    margin-left: -113.5px;
+  }
+  section.listProduct .list ul {
+    flex-wrap: wrap;
+  }
+  section.listProduct .list ul li {
+    width: 140px;
+    margin: 0 25px;
+  }
+  section.listProduct .list ul li:nth-child(1) {
+    list-style: outside;
+  }
+  section.listProduct .products .product:nth-child(1) {
+    display: none;
+  }
+  section.listProduct .products .product:nth-child(2) {
+    display: none;
+  }
+  section.listProduct .products .product:nth-child(3) {
+    display: none;
+  }
+  section.listProduct .products .product:nth-child(4) {
+    display: none;
+  }
+  section.listProduct .products .product:nth-child(5) {
+    display: none;
+  }
+  section.listProduct .products .product:nth-child(6) {
+    display: none;
+  }
+  section.listProduct .products .product:nth-child(2) {
+    display: block;
+    width: 100%;
+  }
+  section.listProduct .products .product:nth-child(2) .product__action {
+    display: block;
+  }
+  section.listProduct .icon {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=listProducts.css.map */

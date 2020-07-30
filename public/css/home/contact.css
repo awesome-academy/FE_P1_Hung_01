@@ -239,4 +239,50 @@
   transition: 0.5s;
 }
 
+@media (max-width: 575.98px) {
+  .contact__icon {
+    display: flex;
+  }
+  .contact__icon i:nth-child(1) {
+    display: none;
+  }
+  .contact__icon i:nth-child(2) {
+    display: none;
+  }
+  .contact__icon i:nth-child(3) {
+    display: none;
+  }
+  .contact__icon i:nth-child(4) {
+    display: none;
+  }
+  .contact__icon i:nth-child(5) {
+    display: none;
+  }
+  .contact__icon i:nth-child(6) {
+    display: none;
+  }
+  .contact__icon i:nth-child(1) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__icon i:nth-child(2) {
+    display: block;
+    width: 50%;
+    border-top: 1px solid #dadada;
+    padding-top: 45px;
+  }
+  .contact__description {
+    flex-direction: column;
+  }
+  .contact__description .introduction, .contact__description .blog {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .contact__description .email {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,43 @@
+@import "../mixins";
+
+section.newsletterPopup {
+  @include customPosition(absolute, 0, 0, 9999, 100%, 4648px, true);
+  background: rgba(120, 120, 120, 0.5);
+  .main {
+    @include customPosition(relative, 5%, 50%, 9999, 650px, 650px, true);
+    @include customBackground("../../images/image23.png", 650px, 650px);
+    margin-left: -325px;
+    .section {
+      @include customPosition(absolute, 25%, 50%, 9999, 400px, 300px, true);
+      text-align: center;
+      margin-left: -200px;
+      h1 {
+        @include customFont(28px, "openSansBold");
+        margin-bottom: 20px;
+        color: #1a1a1a;
+      }
+      p {
+        @include customFont(12px, "openSans");
+        margin-bottom: 30px;
+        color: #656565;
+      }
+      input {
+        @include customFont(12px, "openSans");
+        color: #656565;
+        padding: 12px 25px;
+        border: 1px solid #dcdcdc;
+        border-radius: 30px;
+        display: block;
+        width: 100%;
+      }
+      span {
+        @include customFont(14px, "openSans");
+        display: inline-block;
+        color: #131313;
+        border-bottom: 2px solid #b2b2b2;
+        text-transform: uppercase;
+        margin-top: 30px;
+      }
+    }
+  }
+}

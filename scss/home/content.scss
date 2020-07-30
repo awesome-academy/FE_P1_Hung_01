@@ -60,6 +60,7 @@ section.content {
   }
   .comment {
     display: flex;
+    flex-wrap: wrap;
     @include customBackground("../../images/image5.png", 100%, 335px);
     background-position: right;
     &__image {
@@ -111,3 +112,74 @@ section.content {
     
   }
 }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {  
+  section.content {
+    .row {
+      flex-direction: column;
+      .col {
+        width: 100%;
+        .product {
+          &__image {
+            height: 245px !important;
+          }
+
+          &__name {
+            height: 245px !important;
+          }
+        }
+        .image {
+          height: 490px;
+        }
+      }
+    }
+    .comment {
+      flex-wrap: wrap-reverse;
+      height: auto;
+      background-position: center;
+      &__image {
+        margin: 30px 10px 30px 30px;
+        position: relative;
+      }
+      &__image::before {
+        @include customPosition(absolute, 45px, 145px, 2, 0, 0, false);
+        @include customFont(14px, "openSans");
+        content: "TUTILE";
+      }
+      &__image::after {
+        @include customPosition(absolute, 70px, 145px, 2, 200px, 0, true);
+        @include customFont(14px, "openSansItalic");
+        content: "Giám đốc phát triển sản phẩm";
+        color: #737373;
+      }
+      &__text {
+        width: 100%;
+        margin: 0;
+        &__content {
+          font-size: 14px;
+          text-align: center;
+          margin: 20px 0;
+        }
+        &__title {
+          display: none;
+        }
+        &__icon {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {  }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {  }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

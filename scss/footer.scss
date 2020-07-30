@@ -34,9 +34,9 @@ footer {
         }
         i:nth-child(2) {
           p {
-            width: 80%;
+            width: 90%;
             line-height: 3;
-            margin-left: 40px;
+            margin-left: 32px;
           }
         }
         i:nth-child(2)::before {
@@ -64,6 +64,10 @@ footer {
           li {
             list-style: none;
             position: relative;
+            a {
+              text-decoration: none;
+              color: #464646;
+            }
           }
           li::before {
             content: "";
@@ -72,7 +76,7 @@ footer {
             opacity: 0;
             transition: 0.5s;
           }
-          li:hover {
+          li:hover, li a:hover {
             @include customPosition(relative, 0, 10px, 999, 3px, 3px, false);
             color: $colorGreen;
             transition: 0.5s;
@@ -100,3 +104,94 @@ footer {
     }
   }
 }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  @include responsiveFooter;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 576px) and (max-width: 767.98px) {  
+  @include responsiveFooter;
+  footer {
+    .layout {
+      .container {
+        .row {
+          .contact {
+            i.fas.fa-map-marker-alt {
+              width: 100%;
+            }
+            i:nth-child(4),i:nth-child(6) {
+              margin-right: 333px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (min-width: 768px) and (max-width: 991.98px) {  
+  @include responsiveFooter;
+  footer {
+    .layout {
+      .container {
+        .row {
+          .contact {
+            i.fas.fa-map-marker-alt {
+              width: 100%;
+            }
+            i:nth-child(4),i:nth-child(6) {
+              margin-right: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+  @include responsiveFooter;
+  footer {
+    .layout {
+      .container {
+        .row {
+          .contact {
+            i.fas.fa-map-marker-alt {
+              width: 100%;
+            }
+            i:nth-child(4),i:nth-child(6) {
+              margin-right: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  @include responsiveFooter;
+  footer {
+    .layout {
+      .container {
+        .row {
+          .contact {
+            i.fas.fa-map-marker-alt {
+              width: 100%;
+            }
+            i:nth-child(4),i:nth-child(6) {
+              margin-right: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

@@ -2,6 +2,8 @@ header
   .container.row
     .logo
     nav
+      input(id="menu" type="checkbox")
+      label(for="menu")
       ul
         for i in nav
           li
@@ -29,6 +31,6 @@ header
           .total
             p.total__title Tổng số
             p.total__money 240.000
-              sup đ
-          span Giỏ Hàng
+              sup đ 
+          a(href="../cart/cart.html") Giỏ Hàng
       .header__right__search

@@ -16,10 +16,7 @@ section.navbar {
         @include customFont(141px, "viceroy");
       }
       p {
-        font: {
-          size: 19px;
-          family: "openSansLight";
-        }
+        @include customFont(19px, "openSansLight");
       }
       h2 {
         color: $colorGreen;
@@ -38,3 +35,42 @@ section.navbar {
     }
   }
 }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {  
+  section.navbar {
+    height: 495px;
+    .layout {
+      @include customBackground("../../images/image30.jpg", 100%, 580px);
+      .content {
+        top: 305px;
+        left: 0;
+        text-align: center;
+        width: 340px;
+        h1 {
+          font-size: 88px;
+        }
+        p {
+          font-size: 16px;
+          width: 220px;
+          margin-left: 42.5px;
+        }
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {  }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {  }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
