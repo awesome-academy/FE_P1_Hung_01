@@ -1,0 +1,52 @@
+section.main.container 
+  sidebar
+    i.fas.fa-bars
+      h3 Danh mục sản phẩm
+    for i in list1
+      .title 
+        case i
+          when "Trang sức"
+            span.active=i
+            i.fas.fa-caret-down.fa--black
+          default
+            span=i
+            i.fas.fa-caret-right
+      case i
+        when "Trang sức"
+          ul
+            for n in listProducts
+              li
+                a(href="#")=n
+    h3 So sánh sản phẩm
+    p Bạn chưa có sản phẩm nào đe so sánh
+    h3 Tag sản phẩm
+    .tag
+      for i in tag1
+        span=i
+    .image
+      h1 Mandala store
+  .content
+    .header
+      .type
+        i.fas.fa-th-large
+        i.fas.fa-list-ul
+      .list
+        i.fas.fa-caret-left
+        span 1
+        span 2
+        span 3
+        i.fas.fa-caret-right
+    .products
+      for i in products
+        .product
+          + customProducts(i)
+    .footer
+      .type
+        i.fas.fa-th-large
+        i.fas.fa-list-ul
+      .list
+        i.fas.fa-caret-left
+        span 1
+        span 2
+        span 3
+        i.fas.fa-caret-right

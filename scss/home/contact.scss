@@ -127,19 +127,7 @@
       .tag {
         @include customContactTitle();
         width: 100%;
-        span {
-          @include customFont(12px, "openSans");
-          display: inline-block;
-          padding: 6px 8px;
-          margin: 5px 8px 5px 0;
-          transition: 0.5s;
-          border: 1px solid #e8e8e8;
-        }
-        span:hover {
-          background: $colorGreen;
-          color: $colorWhite;
-          transition: 0.5s;
-        }
+        @include customTag($colorGreen);
       }
     }
   }

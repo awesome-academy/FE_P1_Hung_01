@@ -14,7 +14,8 @@ header
                     table(style="width:100%")
                       tr
                         for n in listTitle
-                          th=n
+                          th
+                            a(href=n.href)=n.title
                       for a in dropdown
                         + customTable(a)
               default

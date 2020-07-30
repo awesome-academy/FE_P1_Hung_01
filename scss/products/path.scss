@@ -1,0 +1,24 @@
+@import "../mixins";
+
+section.path {
+  padding: 20px 0;
+  @include customFont(12px, "openSans");
+  span {
+    color: #737373;
+    i {
+      margin: 5px 0 0 5px;
+    }
+    i::before {
+      color: #737373;
+    }
+    p {
+      display: inline;
+    }
+  }
+  .active {
+    color: $colorGreen;
+    i::before {
+      color: $colorGreen;
+    }
+  }
+}

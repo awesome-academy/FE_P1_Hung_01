@@ -1,6 +1,7 @@
 $colorWhite: #fff;
 $colorGreen: #789629;
 $colorGray: #e6e6e6;
+$colorBlack: #000;
 $listSale: "../../images/plane.png", "../../images/gift.png", "../../images/star.png";
 $listProduct: "../../images/image9.jpg", "../../images/image10.jpg", "../../images/image11.jpg", "../../images/image12.jpg", "../../images/image13.jpg", "../../images/image14.jpg";
 
@@ -74,5 +75,21 @@ $listProduct: "../../images/image9.jpg", "../../images/image10.jpg", "../../imag
     @include customPosition(absolute, 40px, 50%, 2, 295px, 8px, false);
     content: "";
     margin-left: -185px;
+  }
+}
+
+@mixin customTag($color) {
+  span {
+    @include customFont(12px, "openSans");
+    display: inline-block;
+    padding: 6px 8px;
+    margin: 5px 8px 5px 0;
+    transition: 0.5s;
+    border: 1px solid #e8e8e8;
+  }
+  span:hover {
+    background: $color;
+    color: $colorWhite;
+    transition: 0.5s;
   }
 }
