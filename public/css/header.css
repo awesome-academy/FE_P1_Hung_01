@@ -182,7 +182,8 @@ header .container .header__right .dropdown__content .total__money {
   color: #789629;
   padding-right: 9px;
 }
-header .container .header__right .dropdown__content span {
+header .container .header__right .dropdown__content a {
+  text-decoration: none;
   padding: 7px 6px;
   background: #212121;
   color: #fff;
