@@ -32,8 +32,9 @@ footer
         .list
           h1 My account
           ul
-            for n in dropdownFooter4
-              li=n
+            block li
+              for n in dropdownFooter4
+                li=n
   .container
     .footer__bottom
       p © Copyright 2008-2014 DKT Technology JSC
