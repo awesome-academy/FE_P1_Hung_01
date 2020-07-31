@@ -1,0 +1,24 @@
+section.information.container 
+  .content 
+    .content__nav 
+      for i in list2
+        case i
+          when "Đặc điểm nổi bật"
+            h1.active=i
+          default 
+            h1=i
+    + customDetailOne
+    + customDetailTwo
+    + customDetailOne
+    + customDetailTwo
+  .sidebar 
+    .sale
+      h1 Sản phẩm bán chạy
+      while zero < 3
+        + listProduct 
+        zero++
+    .best
+      h1 Sản phẩm mua nhiều 
+      while zero < 4
+        + listProduct
+        zero++
