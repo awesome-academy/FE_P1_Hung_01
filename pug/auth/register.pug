@@ -6,14 +6,12 @@ block link
   link(rel="stylesheet", href="../../css/footer.css")
   link(rel="stylesheet", href="../../fontawesome-free-5.13.0-web/css/all.min.css")
   link(rel="stylesheet", href="../../css/products/path.css")
-  link(rel="stylesheet", href="../../css/product/thread.css")
-  link(rel="stylesheet", href="../../css/product/information.css")
+  link(rel="stylesheet", href="../../css/auth/formRegister.css")
 
 block main
-  include ./path
-  include ./thread
-  include ./information
-
+  include ./pathRegister
+  include ./formRegister
+  
 block li
   for n in dropdownFooter5
     case n 
@@ -22,10 +20,11 @@ block li
           a(href="../account/account.html")=n
       when "Đăng ký"
         li
-          a(href="../auth/register.html")=n
+          a(href="./register.html")=n
       when "Đăng nhập"
         li
-          a(href="../auth/login.html")=n
+          a(href="./login.html")=n
       default
         li
           a(href="#")=n
+    
