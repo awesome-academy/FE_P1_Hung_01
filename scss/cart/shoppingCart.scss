@@ -1,6 +1,7 @@
 @import "../mixins";
 
 section.cart {
+  margin: 30px auto 85px auto;
   h1 {
     @include customFont(28px, "openSans");
     text-transform: uppercase;
