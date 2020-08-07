@@ -1,4 +1,7 @@
 @charset "UTF-8";
+section.content {
+  overflow: hidden;
+}
 section.content .row {
   justify-content: space-between;
 }
@@ -173,15 +176,21 @@ section.content .row:nth-child(2) .col .image {
   width: 100%;
   height: 641px;
 }
-section.content .comment {
+section.content #slide {
   display: flex;
+  width: 300%;
+  animation: 30s slidy infinite;
+}
+section.content #slide .comment {
+  display: flex;
+  width: 100%;
   flex-wrap: wrap;
   background: url("../../images/image5.png") no-repeat;
   width: 100%;
   height: 335px;
   background-position: right;
 }
-section.content .comment__image {
+section.content #slide .comment__image {
   background: url("../../images/image6.png") no-repeat;
   width: 131px;
   height: 131px;
@@ -191,34 +200,34 @@ section.content .comment__image {
   margin-top: 99px;
   margin-right: 50px;
 }
-section.content .comment__text {
+section.content #slide .comment__text {
   width: 50%;
   margin-top: 99px;
   line-height: 1.5;
 }
-section.content .comment__text__content {
+section.content #slide .comment__text__content {
   font-size: 16px;
   font-family: "openSans";
   margin-bottom: 30px;
 }
-section.content .comment__text__content i {
+section.content #slide .comment__text__content i {
   color: #789629;
 }
-section.content .comment__text__content p {
+section.content #slide .comment__text__content p {
   display: inline;
 }
-section.content .comment__text__title {
+section.content #slide .comment__text__title {
   font-size: 14px;
   font-family: "openSansLight";
   margin-bottom: 35px;
 }
-section.content .comment__text__title span {
+section.content #slide .comment__text__title span {
   font-size: 14px;
   font-family: "openSansItalic";
   margin-left: 10px;
   color: #737373;
 }
-section.content .comment__text__icon span {
+section.content #slide .comment__text__icon span {
   background: url(none) no-repeat;
   width: 7px;
   height: 7px;
@@ -226,8 +235,15 @@ section.content .comment__text__icon span {
   background: #131313;
   margin-right: 8px;
   cursor: pointer;
+  animation: 30s slidy infinite;
 }
-section.content .comment__text__icon span:nth-child(2) {
+section.content #slide .comment:nth-child(1) .comment__text__icon span:nth-child(1) {
+  background: #737373;
+}
+section.content #slide .comment:nth-child(2) .comment__text__icon span:nth-child(2) {
+  background: #737373;
+}
+section.content #slide .comment:nth-child(3) .comment__text__icon span:nth-child(3) {
   background: #737373;
 }
 
@@ -254,16 +270,16 @@ section.content .comment__text__icon span:nth-child(2) {
     background-position: center;
     background-size: cover;
   }
-  section.content .comment {
+  section.content #slide .comment {
     flex-wrap: wrap-reverse;
     height: auto;
     background-position: center;
   }
-  section.content .comment__image {
+  section.content #slide .comment__image {
     margin: 30px 10px 30px 30px;
     position: relative;
   }
-  section.content .comment__image::before {
+  section.content #slide .comment__image::before {
     position: absolute;
     top: 45px;
     left: 145px;
@@ -272,7 +288,7 @@ section.content .comment__text__icon span:nth-child(2) {
     font-family: "openSans";
     content: "TUTILE";
   }
-  section.content .comment__image::after {
+  section.content #slide .comment__image::after {
     position: absolute;
     top: 70px;
     left: 145px;
@@ -284,19 +300,19 @@ section.content .comment__text__icon span:nth-child(2) {
     content: "Giám đốc phát triển sản phẩm";
     color: #737373;
   }
-  section.content .comment__text {
+  section.content #slide .comment__text {
     width: 100%;
     margin: 0;
   }
-  section.content .comment__text__content {
+  section.content #slide .comment__text__content {
     font-size: 14px;
     text-align: center;
     margin: 20px 0;
   }
-  section.content .comment__text__title {
+  section.content #slide .comment__text__title {
     display: none;
   }
-  section.content .comment__text__icon {
+  section.content #slide .comment__text__icon {
     text-align: center;
   }
 }
@@ -323,16 +339,16 @@ section.content .comment__text__icon span:nth-child(2) {
     background-position: center;
     background-size: cover;
   }
-  section.content .comment {
+  section.content #slide .comment {
     flex-wrap: wrap-reverse;
     height: auto;
     background-position: center;
   }
-  section.content .comment__image {
+  section.content #slide .comment__image {
     margin: 30px 10px 30px 30px;
     position: relative;
   }
-  section.content .comment__image::before {
+  section.content #slide .comment__image::before {
     position: absolute;
     top: 45px;
     left: 145px;
@@ -341,7 +357,7 @@ section.content .comment__text__icon span:nth-child(2) {
     font-family: "openSans";
     content: "TUTILE";
   }
-  section.content .comment__image::after {
+  section.content #slide .comment__image::after {
     position: absolute;
     top: 70px;
     left: 145px;
@@ -353,19 +369,19 @@ section.content .comment__text__icon span:nth-child(2) {
     content: "Giám đốc phát triển sản phẩm";
     color: #737373;
   }
-  section.content .comment__text {
+  section.content #slide .comment__text {
     width: 100%;
     margin: 0;
   }
-  section.content .comment__text__content {
+  section.content #slide .comment__text__content {
     font-size: 14px;
     text-align: center;
     margin: 20px 0;
   }
-  section.content .comment__text__title {
+  section.content #slide .comment__text__title {
     display: none;
   }
-  section.content .comment__text__icon {
+  section.content #slide .comment__text__icon {
     text-align: center;
   }
 }
@@ -392,16 +408,16 @@ section.content .comment__text__icon span:nth-child(2) {
     background-position: center;
     background-size: cover;
   }
-  section.content .comment {
+  section.content #slide .comment {
     flex-wrap: wrap-reverse;
     height: auto;
     background-position: center;
   }
-  section.content .comment__image {
+  section.content #slide .comment__image {
     margin: 30px 10px 30px 30px;
     position: relative;
   }
-  section.content .comment__image::before {
+  section.content #slide .comment__image::before {
     position: absolute;
     top: 45px;
     left: 145px;
@@ -410,7 +426,7 @@ section.content .comment__text__icon span:nth-child(2) {
     font-family: "openSans";
     content: "TUTILE";
   }
-  section.content .comment__image::after {
+  section.content #slide .comment__image::after {
     position: absolute;
     top: 70px;
     left: 145px;
@@ -422,19 +438,19 @@ section.content .comment__text__icon span:nth-child(2) {
     content: "Giám đốc phát triển sản phẩm";
     color: #737373;
   }
-  section.content .comment__text {
+  section.content #slide .comment__text {
     width: 100%;
     margin: 0;
   }
-  section.content .comment__text__content {
+  section.content #slide .comment__text__content {
     font-size: 14px;
     text-align: center;
     margin: 20px 0;
   }
-  section.content .comment__text__title {
+  section.content #slide .comment__text__title {
     display: none;
   }
-  section.content .comment__text__icon {
+  section.content #slide .comment__text__icon {
     text-align: center;
   }
 }
@@ -461,16 +477,16 @@ section.content .comment__text__icon span:nth-child(2) {
     background-position: center;
     background-size: cover;
   }
-  section.content .comment {
+  section.content #slide .comment {
     flex-wrap: wrap-reverse;
     height: auto;
     background-position: center;
   }
-  section.content .comment__image {
+  section.content #slide .comment__image {
     margin: 30px 10px 30px 30px;
     position: relative;
   }
-  section.content .comment__image::before {
+  section.content #slide .comment__image::before {
     position: absolute;
     top: 45px;
     left: 145px;
@@ -479,7 +495,7 @@ section.content .comment__text__icon span:nth-child(2) {
     font-family: "openSans";
     content: "TUTILE";
   }
-  section.content .comment__image::after {
+  section.content #slide .comment__image::after {
     position: absolute;
     top: 70px;
     left: 145px;
@@ -491,19 +507,19 @@ section.content .comment__text__icon span:nth-child(2) {
     content: "Giám đốc phát triển sản phẩm";
     color: #737373;
   }
-  section.content .comment__text {
+  section.content #slide .comment__text {
     width: 100%;
     margin: 0;
   }
-  section.content .comment__text__content {
+  section.content #slide .comment__text__content {
     font-size: 14px;
     text-align: center;
     margin: 20px 0;
   }
-  section.content .comment__text__title {
+  section.content #slide .comment__text__title {
     display: none;
   }
-  section.content .comment__text__icon {
+  section.content #slide .comment__text__icon {
     text-align: center;
   }
 }

@@ -370,38 +370,40 @@
         }
       }
     }
-    .comment {
-      flex-wrap: wrap-reverse;
-      height: auto;
-      background-position: center;
-      &__image {
-        margin: 30px 10px 30px 30px;
-        position: relative;
-      }
-      &__image::before {
-        @include customPosition(absolute, 45px, 145px, 2, 0, 0, false);
-        @include customFont(14px, "openSans");
-        content: "TUTILE";
-      }
-      &__image::after {
-        @include customPosition(absolute, 70px, 145px, 2, 200px, 0, true);
-        @include customFont(14px, "openSansItalic");
-        content: "Giám đốc phát triển sản phẩm";
-        color: #737373;
-      }
-      &__text {
-        width: 100%;
-        margin: 0;
-        &__content {
-          font-size: 14px;
-          text-align: center;
-          margin: 20px 0;
+    #slide {
+      .comment {
+        flex-wrap: wrap-reverse;
+        height: auto;
+        background-position: center;
+        &__image {
+          margin: 30px 10px 30px 30px;
+          position: relative;
         }
-        &__title {
-          display: none;
+        &__image::before {
+          @include customPosition(absolute, 45px, 145px, 2, 0, 0, false);
+          @include customFont(14px, "openSans");
+          content: "TUTILE";
         }
-        &__icon {
-          text-align: center;
+        &__image::after {
+          @include customPosition(absolute, 70px, 145px, 2, 200px, 0, true);
+          @include customFont(14px, "openSansItalic");
+          content: "Giám đốc phát triển sản phẩm";
+          color: #737373;
+        }
+        &__text {
+          width: 100%;
+          margin: 0;
+          &__content {
+            font-size: 14px;
+            text-align: center;
+            margin: 20px 0;
+          }
+          &__title {
+            display: none;
+          }
+          &__icon {
+            text-align: center;
+          }
         }
       }
     }
@@ -436,24 +438,26 @@
         }
       }
     }
-    .products {
-      @for $i from 1 to 7 {
-        .product:nth-child(#{$i}) {
+    #slide {
+      .products {
+        @for $i from 1 to 7 {
+          .product:nth-child(#{$i}) {
+            display: none;
+          }
+        }
+        .product:nth-child(2) {
+          display: block;
+          width: 100%;
+          .product__action {
+            display: block;
+          }
+        }
+        .product:hover .product__action {
+          opacity: 0;
+        }
+        .product:hover .product__detail i:nth-child(4) {
           display: none;
         }
-      }
-      .product:nth-child(2) {
-        display: block;
-        width: 100%;
-        .product__action {
-          display: block;
-        }
-      }
-      .product:hover .product__action {
-        opacity: 0;
-      }
-      .product:hover .product__detail i:nth-child(4) {
-        display: none;
       }
     }
     .icon {

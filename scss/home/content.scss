@@ -1,6 +1,7 @@
 @import "../mixins";
 
 section.content {
+  overflow: hidden;
   .row {
     justify-content: space-between;
     .col {
@@ -58,58 +59,73 @@ section.content {
       }
     }
   }
-  .comment {
+  #slide {
     display: flex;
-    flex-wrap: wrap;
-    @include customBackground("../../images/image5.png", 100%, 335px);
-    background-position: right;
-    &__image {
-      @include customBackground("../../images/image6.png", 131px, 131px);
-      background-position: center;
-      border-radius: 50%;
-      border: 3px solid #cbd4b3;
-      margin: {
-        top: 99px;
-        right: 50px;
+    width: 300%;
+    animation: 30s slidy infinite;
+    .comment {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      @include customBackground("../../images/image5.png", 100%, 335px);
+      background-position: right;
+      &__image {
+        @include customBackground("../../images/image6.png", 131px, 131px);
+          background-position: center;
+          border-radius: 50%;
+          border: 3px solid #cbd4b3;
+          margin: {
+            top: 99px;
+            right: 50px;
+          }
+        }
+      &__text {
+        width: 50%;
+        margin-top: 99px;
+        line-height: 1.5;
+        &__content {
+          @include customFont(16px, "openSans");
+          margin-bottom: 30px;
+          i {
+            color: $colorGreen;
+          }
+          p {
+            display: inline;
+          }
+        }
+        &__title {
+          @include customFont(14px, "openSansLight");
+          margin-bottom: 35px;
+          span {
+            @include customFont(14px, "openSansItalic");
+            margin-left: 10px;
+            color: #737373;
+          }
+        }
+        &__icon {
+          span {
+            @include customBackground(none, 7px, 7px);
+            display: inline-block;
+            background: #131313;
+            margin-right: 8px;
+            cursor: pointer;
+            animation: 30s slidy infinite;
+          }
+        }
+      }
+      
+    }
+    @for $i from 1 to 4 {
+      .comment:nth-child(#{$i}) {
+        .comment__text {
+          &__icon {
+            span:nth-child(#{$i}) {
+              background: #737373;
+            }
+          }
+        }
       }
     }
-    &__text {
-      width: 50%;
-      margin-top: 99px;
-      line-height: 1.5;
-      &__content {
-        @include customFont(16px, "openSans");
-        margin-bottom: 30px;
-        i {
-          color: $colorGreen;
-        }
-        p {
-          display: inline;
-        }
-      }
-      &__title {
-        @include customFont(14px, "openSansLight");
-        margin-bottom: 35px;
-        span {
-          @include customFont(14px, "openSansItalic");
-          margin-left: 10px;
-          color: #737373;
-        }
-      }
-      &__icon {
-        span {
-          @include customBackground(none, 7px, 7px);
-          display: inline-block;
-          background: #131313;
-          margin-right: 8px;
-          cursor: pointer;
-        }
-        span:nth-child(2) {
-          background: #737373;
-        }
-      }
-    }
-    
   }
 }
 

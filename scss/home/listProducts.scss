@@ -2,6 +2,7 @@
 
 section.listProduct {
   @include customBackground("../../images/image8.jpg", 100%, 806px);
+  overflow: hidden;
   position: relative;
   border: {
     top: 1px solid $colorGray;
@@ -59,110 +60,136 @@ section.listProduct {
       }
     }
   }
-  .products {
-    margin-top: 60px;
+  #slide {
     display: flex;
-    justify-content: space-around;
-    @for $i from 1 to 7 {
-      $item: nth($listProduct, $n: $i);
-      .product:nth-child(#{$i}) {
-        .product__image {
-          @include customBackground($item, 100%, 270px);
+    width: 300%;
+    animation: 30s slidy infinite;
+    .products {
+      width: 100%;
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-around;
+      @for $i from 1 to 7 {
+        $item: nth($listProduct, $n: $i);
+        .product:nth-child(#{$i}) {
+          .product__image {
+            @include customBackground($item, 100%, 270px);
+            background-position: center;
+            border-bottom: 1px dashed $colorGray;
+          }
+        }
+      }
+      .product {
+        width: 15%;
+        position: relative;
+        &__detail {
+          width: 100%;
+          background: $colorWhite;
+          text-align: center;
+          padding-top: 25px;
+          line-height: 1.5;
+          h2 {
+            @include customFont(14px, "openSansBold");
+            color: #b4b4b4;
+          }
+          h3 {
+            @include customFont(16px, "openSans");
+            color: #424242;
+            position: relative;
+            margin-bottom: 30px;
+          }
+          h3::after {
+            content: "";
+            @include customPosition(absolute, 35px,50%, 2, 38px, 2px, true);
+            background: #818181;
+            margin-left: -17px;
+          }
+          i {
+            @include customFont(16px, "lobster");
+            color: $colorGreen;
+          }
+          i:nth-child(4) {
+            color: #b4b4b4;
+            display: none;
+            transition: 0.5s;
+          }
+        }
+        &__image {
           background-position: center;
           border-bottom: 1px dashed $colorGray;
         }
-      }
-    }
-    .product {
-      width: 15%;
-      position: relative;
-      &__detail {
-        width: 100%;
-        background: $colorWhite;
-        text-align: center;
-        padding-top: 25px;
-        line-height: 1.5;
-        h2 {
-          @include customFont(14px, "openSansBold");
-          color: #b4b4b4;
-        }
-        h3 {
-          @include customFont(16px, "openSans");
-          color: #424242;
-          position: relative;
-          margin-bottom: 30px;
-        }
-        h3::after {
-          content: "";
-          @include customPosition(absolute, 35px,50%, 2, 38px, 2px, true);
-          background: #818181;
-          margin-left: -17px;
-        }
-        i {
-          @include customFont(16px, "lobster");
-          color: $colorGreen;
-        }
-        i:nth-child(4) {
-          color: #b4b4b4;
-          display: none;
+        &__action {
+          width: 100%;
+          background: $colorWhite;
+          padding-top: 27px;
+          text-align: center;
+          opacity: 0;
           transition: 0.5s;
+          span {
+            @include customFont(14px, "openSansBold");
+            padding: 10px;
+            border: 1px solid #b4b4b4;
+            border-radius: 10px;
+            transition: 0.5s;
+          }
+          span:hover {
+            background: #1a1a1a;
+            color: $colorWhite;
+            transition: 0.5s;
+          }
+          i {
+            font-size: 14px;
+            padding: 12px;
+            border: 1px solid #b4b4b4;
+            border-radius: 10px;
+            transition: 0.5s;
+            margin-left: 10px;
+          }
+          i:hover {
+            background: #1a1a1a;
+            color: $colorWhite;
+            transition: 0.5s;
+          }
         }
       }
-      &__image {
-        background-position: center;
-        border-bottom: 1px dashed $colorGray;
-      }
-      &__action {
-        width: 100%;
-        background: $colorWhite;
-        padding-top: 27px;
-        text-align: center;
-        opacity: 0;
+      .product:hover .product__action {
+        opacity: 1;
         transition: 0.5s;
-        span {
-          @include customFont(14px, "openSansBold");
-          padding: 10px;
-          border: 1px solid #b4b4b4;
-          border-radius: 10px;
-          transition: 0.5s;
-        }
-        span:hover {
-          background: #1a1a1a;
-          color: $colorWhite;
-          transition: 0.5s;
-        }
-        i {
-          font-size: 14px;
-          padding: 12px;
-          border: 1px solid #b4b4b4;
-          border-radius: 10px;
-          transition: 0.5s;
-          margin-left: 10px;
-        }
-        i:hover {
-          background: #1a1a1a;
-          color: $colorWhite;
-          transition: 0.5s;
-        }
+      }
+      .product:hover .product__detail i:nth-child(4) {
+        display: inline;
+        transition: 0.5s;
+      }
+      .product:nth-child(1)::after {
+        @include customPosition(absolute, 0,0, 2, 100%, 100%, true);
+        background: rgba(255, 255, 255, 0.5);
+        content: "";
+      }
+      .product:nth-child(6)::after {
+        @include customPosition(absolute, 0,0, 2, 100%, 100%, true);
+        background: rgba(255, 255, 255, 0.5);
+        content: "";
       }
     }
-    .product:hover .product__action {
-      opacity: 1;
-      transition: 0.5s;
+  }
+  @keyframes slidy {
+    0% {
+      transform: translateX(   0%)
     }
-    .product:hover .product__detail i:nth-child(4) {
-      display: inline;
-      transition: 0.5s;
+    30% {
+      transform: translateX(   0%)
     }
-    .product:nth-child(1)::after {
-      @include customPosition(absolute, 0,0, 2, 100%, 100%, true);
-      background: rgba(255, 255, 255, 0.5);
-      content: "";
+    33% {
+      transform: translateX(   -33.3333%)
     }
-    .product:nth-child(6)::after {
-      @include customPosition(absolute, 0,0, 2, 100%, 100%, true);
-      background: rgba(255, 255, 255, 0.5);
-      content: "";
+    63% {
+      transform: translateX(   -33.3333%)
+    }
+    66% {
+      transform: translateX(   -66.6666%)
+    }
+    100% {
+      transform: translateX(   -66.6666%)
     }
   }
   .icon {
@@ -202,22 +229,24 @@ section.listProduct {
 // Medium devices (tablets, less than 992px)
 @media (min-width: 768px) and (max-width: 991.98px) {  
   section.listProduct {
-    .products {
-      padding-top: 60px;
-      width: 60%;
-      margin: auto;
-      @for $i from 1 to 7 {
-        .product:nth-child(#{$i}) {
-          display: none;
+    #slide {
+      .products {
+        padding-top: 60px;
+        width: 60%;
+        margin: auto;
+        @for $i from 1 to 7 {
+          .product:nth-child(#{$i}) {
+            display: none;
+          }
         }
-      }
-      .product:nth-child(2) {
-        display: block;
-        width: 50%;
-      }
-      .product:nth-child(3) {
-        display: block;
-        width: 50%;
+        .product:nth-child(2) {
+          display: block;
+          width: 50%;
+        }
+        .product:nth-child(3) {
+          display: block;
+          width: 50%;
+        }
       }
     }
     .icon {
@@ -229,22 +258,24 @@ section.listProduct {
 // Large devices (desktops, less than 1200px)
 @media (min-width: 992px) and (max-width: 1199.98px) {  
   section.listProduct {
-    .products {
-      padding-top: 60px;
-      width: 60%;
-      margin: auto;
-      @for $i from 1 to 7 {
-        .product:nth-child(#{$i}) {
-          display: none;
+    #slide {
+      .products {
+        padding-top: 60px;
+        width: 60%;
+        margin: auto;
+        @for $i from 1 to 7 {
+          .product:nth-child(#{$i}) {
+            display: none;
+          }
         }
-      }
-      .product:nth-child(2) {
-        display: block;
-        width: 40%;
-      }
-      .product:nth-child(3) {
-        display: block;
-        width: 40%;
+        .product:nth-child(2) {
+          display: block;
+          width: 40%;
+        }
+        .product:nth-child(3) {
+          display: block;
+          width: 40%;
+        }
       }
     }
     .icon {
@@ -255,22 +286,24 @@ section.listProduct {
 
 @media (min-width: 1200px) and (max-width: 1366px) {
   section.listProduct {
-    .products {
-      padding-top: 60px;
-      width: 60%;
-      margin: auto;
-      @for $i from 1 to 7 {
-        .product:nth-child(#{$i}) {
-          display: none;
+    #slide {
+      .products {
+        padding-top: 60px;
+        width: 60%;
+        margin: auto;
+        @for $i from 1 to 7 {
+          .product:nth-child(#{$i}) {
+            display: none;
+          }
         }
-      }
-      .product:nth-child(2) {
-        display: block;
-        width: 30%;
-      }
-      .product:nth-child(3) {
-        display: block;
-        width: 30%;
+        .product:nth-child(2) {
+          display: block;
+          width: 30%;
+        }
+        .product:nth-child(3) {
+          display: block;
+          width: 30%;
+        }
       }
     }
     .icon {

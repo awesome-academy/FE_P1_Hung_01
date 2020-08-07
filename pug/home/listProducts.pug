@@ -12,10 +12,19 @@ section.listProduct
       li Nước hoa 
       li.active Trang sức 
       li Quà tặng 
-  .products
-    for i in products
-      .product
-        + customProducts(i)
+  #slide
+    .products
+      for i in products
+        .product
+          + customProducts(i)
+    .products
+      for i in products
+        .product
+          + customProducts(i)
+    .products
+      for i in products
+        .product
+          + customProducts(i)
   .icon
     .icon__right
     .icon__left

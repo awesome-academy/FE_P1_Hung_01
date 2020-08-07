@@ -2,6 +2,7 @@ section.listProduct {
   background: url("../../images/image8.jpg") no-repeat;
   width: 100%;
   height: 806px;
+  overflow: hidden;
   position: relative;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
@@ -60,77 +61,83 @@ section.listProduct .list ul li:nth-child(1) {
 section.listProduct .list ul .active {
   color: #789629;
 }
-section.listProduct .products {
+section.listProduct #slide {
+  display: flex;
+  width: 300%;
+  animation: 30s slidy infinite;
+}
+section.listProduct #slide .products {
+  width: 100%;
   margin-top: 60px;
   display: flex;
   justify-content: space-around;
 }
-section.listProduct .products .product:nth-child(1) .product__image {
+section.listProduct #slide .products .product:nth-child(1) .product__image {
   background: url("../../images/image9.jpg") no-repeat;
   width: 100%;
   height: 270px;
   background-position: center;
   border-bottom: 1px dashed #e6e6e6;
 }
-section.listProduct .products .product:nth-child(2) .product__image {
+section.listProduct #slide .products .product:nth-child(2) .product__image {
   background: url("../../images/image10.jpg") no-repeat;
   width: 100%;
   height: 270px;
   background-position: center;
   border-bottom: 1px dashed #e6e6e6;
 }
-section.listProduct .products .product:nth-child(3) .product__image {
+section.listProduct #slide .products .product:nth-child(3) .product__image {
   background: url("../../images/image11.jpg") no-repeat;
   width: 100%;
   height: 270px;
   background-position: center;
   border-bottom: 1px dashed #e6e6e6;
 }
-section.listProduct .products .product:nth-child(4) .product__image {
+section.listProduct #slide .products .product:nth-child(4) .product__image {
   background: url("../../images/image12.jpg") no-repeat;
   width: 100%;
   height: 270px;
   background-position: center;
   border-bottom: 1px dashed #e6e6e6;
 }
-section.listProduct .products .product:nth-child(5) .product__image {
+section.listProduct #slide .products .product:nth-child(5) .product__image {
   background: url("../../images/image13.jpg") no-repeat;
   width: 100%;
   height: 270px;
   background-position: center;
   border-bottom: 1px dashed #e6e6e6;
 }
-section.listProduct .products .product:nth-child(6) .product__image {
+section.listProduct #slide .products .product:nth-child(6) .product__image {
   background: url("../../images/image14.jpg") no-repeat;
   width: 100%;
   height: 270px;
   background-position: center;
   border-bottom: 1px dashed #e6e6e6;
 }
-section.listProduct .products .product {
+section.listProduct #slide .products .product {
   width: 15%;
   position: relative;
 }
-section.listProduct .products .product__detail {
+section.listProduct #slide .products .product__detail {
   width: 100%;
   background: #fff;
   text-align: center;
   padding-top: 25px;
   line-height: 1.5;
 }
-section.listProduct .products .product__detail h2 {
+section.listProduct #slide .products .product__detail h2 {
   font-size: 14px;
   font-family: "openSansBold";
   color: #b4b4b4;
 }
-section.listProduct .products .product__detail h3 {
+section.listProduct #slide .products .product__detail h3 {
   font-size: 16px;
   font-family: "openSans";
   color: #424242;
   position: relative;
   margin-bottom: 30px;
 }
-section.listProduct .products .product__detail h3::after {
+section.listProduct #slide .products .product__detail h3::after {
   content: "";
   position: absolute;
   top: 35px;
@@ -141,21 +148,21 @@ section.listProduct .products .product__detail h3::after {
   background: #818181;
   margin-left: -17px;
 }
-section.listProduct .products .product__detail i {
+section.listProduct #slide .products .product__detail i {
   font-size: 16px;
   font-family: "lobster";
   color: #789629;
 }
-section.listProduct .products .product__detail i:nth-child(4) {
+section.listProduct #slide .products .product__detail i:nth-child(4) {
   color: #b4b4b4;
   display: none;
   transition: 0.5s;
 }
-section.listProduct .products .product__image {
+section.listProduct #slide .products .product__image {
   background-position: center;
   border-bottom: 1px dashed #e6e6e6;
 }
-section.listProduct .products .product__action {
+section.listProduct #slide .products .product__action {
   width: 100%;
   background: #fff;
   padding-top: 27px;
@@ -163,7 +170,7 @@ section.listProduct .products .product__action {
   opacity: 0;
   transition: 0.5s;
 }
-section.listProduct .products .product__action span {
+section.listProduct #slide .products .product__action span {
   font-size: 14px;
   font-family: "openSansBold";
   padding: 10px;
@@ -171,12 +178,12 @@ section.listProduct .products .product__action span {
   border-radius: 10px;
   transition: 0.5s;
 }
-section.listProduct .products .product__action span:hover {
+section.listProduct #slide .products .product__action span:hover {
   background: #1a1a1a;
   color: #fff;
   transition: 0.5s;
 }
-section.listProduct .products .product__action i {
+section.listProduct #slide .products .product__action i {
   font-size: 14px;
   padding: 12px;
   border: 1px solid #b4b4b4;
@@ -184,20 +191,20 @@ section.listProduct .products .product__action i {
   transition: 0.5s;
   margin-left: 10px;
 }
-section.listProduct .products .product__action i:hover {
+section.listProduct #slide .products .product__action i:hover {
   background: #1a1a1a;
   color: #fff;
   transition: 0.5s;
 }
-section.listProduct .products .product:hover .product__action {
+section.listProduct #slide .products .product:hover .product__action {
   opacity: 1;
   transition: 0.5s;
 }
-section.listProduct .products .product:hover .product__detail i:nth-child(4) {
+section.listProduct #slide .products .product:hover .product__detail i:nth-child(4) {
   display: inline;
   transition: 0.5s;
 }
-section.listProduct .products .product:nth-child(1)::after {
+section.listProduct #slide .products .product:nth-child(1)::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -207,7 +214,7 @@ section.listProduct .products .product:nth-child(1)::after {
   background: rgba(255, 255, 255, 0.5);
   content: "";
 }
-section.listProduct .products .product:nth-child(6)::after {
+section.listProduct #slide .products .product:nth-child(6)::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -216,6 +223,26 @@ section.listProduct .products .product:nth-child(6)::after {
   height: 100%;
   background: rgba(255, 255, 255, 0.5);
   content: "";
+}
+@keyframes slidy {
+  0% {
+    transform: translateX(0%);
+  }
+  30% {
+    transform: translateX(0%);
+  }
+  33% {
+    transform: translateX(-33.3333%);
+  }
+  63% {
+    transform: translateX(-33.3333%);
+  }
+  66% {
+    transform: translateX(-66.6666%);
+  }
+  100% {
+    transform: translateX(-66.6666%);
+  }
 }
 section.listProduct .icon {
   display: flex;
@@ -264,35 +291,35 @@ section.listProduct .icon__left {
   section.listProduct .list ul li:nth-child(1) {
     list-style: outside;
   }
-  section.listProduct .products .product:nth-child(1) {
+  section.listProduct #slide .products .product:nth-child(1) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(2) {
+  section.listProduct #slide .products .product:nth-child(2) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(3) {
+  section.listProduct #slide .products .product:nth-child(3) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(4) {
+  section.listProduct #slide .products .product:nth-child(4) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(5) {
+  section.listProduct #slide .products .product:nth-child(5) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(6) {
+  section.listProduct #slide .products .product:nth-child(6) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(2) {
+  section.listProduct #slide .products .product:nth-child(2) {
     display: block;
     width: 100%;
   }
-  section.listProduct .products .product:nth-child(2) .product__action {
+  section.listProduct #slide .products .product:nth-child(2) .product__action {
     display: block;
   }
-  section.listProduct .products .product:hover .product__action {
+  section.listProduct #slide .products .product:hover .product__action {
     opacity: 0;
   }
-  section.listProduct .products .product:hover .product__detail i:nth-child(4) {
+  section.listProduct #slide .products .product:hover .product__detail i:nth-child(4) {
     display: none;
   }
   section.listProduct .icon {
@@ -322,35 +349,35 @@ section.listProduct .icon__left {
   section.listProduct .list ul li:nth-child(1) {
     list-style: outside;
   }
-  section.listProduct .products .product:nth-child(1) {
+  section.listProduct #slide .products .product:nth-child(1) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(2) {
+  section.listProduct #slide .products .product:nth-child(2) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(3) {
+  section.listProduct #slide .products .product:nth-child(3) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(4) {
+  section.listProduct #slide .products .product:nth-child(4) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(5) {
+  section.listProduct #slide .products .product:nth-child(5) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(6) {
+  section.listProduct #slide .products .product:nth-child(6) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(2) {
+  section.listProduct #slide .products .product:nth-child(2) {
     display: block;
     width: 100%;
   }
-  section.listProduct .products .product:nth-child(2) .product__action {
+  section.listProduct #slide .products .product:nth-child(2) .product__action {
     display: block;
   }
-  section.listProduct .products .product:hover .product__action {
+  section.listProduct #slide .products .product:hover .product__action {
     opacity: 0;
   }
-  section.listProduct .products .product:hover .product__detail i:nth-child(4) {
+  section.listProduct #slide .products .product:hover .product__detail i:nth-child(4) {
     display: none;
   }
   section.listProduct .icon {
@@ -362,34 +389,34 @@ section.listProduct .icon__left {
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  section.listProduct .products {
+  section.listProduct #slide .products {
     padding-top: 60px;
     width: 60%;
     margin: auto;
   }
-  section.listProduct .products .product:nth-child(1) {
+  section.listProduct #slide .products .product:nth-child(1) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(2) {
+  section.listProduct #slide .products .product:nth-child(2) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(3) {
+  section.listProduct #slide .products .product:nth-child(3) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(4) {
+  section.listProduct #slide .products .product:nth-child(4) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(5) {
+  section.listProduct #slide .products .product:nth-child(5) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(6) {
+  section.listProduct #slide .products .product:nth-child(6) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(2) {
+  section.listProduct #slide .products .product:nth-child(2) {
     display: block;
     width: 50%;
   }
-  section.listProduct .products .product:nth-child(3) {
+  section.listProduct #slide .products .product:nth-child(3) {
     display: block;
     width: 50%;
   }
@@ -398,34 +425,34 @@ section.listProduct .icon__left {
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  section.listProduct .products {
+  section.listProduct #slide .products {
     padding-top: 60px;
     width: 60%;
     margin: auto;
   }
-  section.listProduct .products .product:nth-child(1) {
+  section.listProduct #slide .products .product:nth-child(1) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(2) {
+  section.listProduct #slide .products .product:nth-child(2) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(3) {
+  section.listProduct #slide .products .product:nth-child(3) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(4) {
+  section.listProduct #slide .products .product:nth-child(4) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(5) {
+  section.listProduct #slide .products .product:nth-child(5) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(6) {
+  section.listProduct #slide .products .product:nth-child(6) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(2) {
+  section.listProduct #slide .products .product:nth-child(2) {
     display: block;
     width: 40%;
   }
-  section.listProduct .products .product:nth-child(3) {
+  section.listProduct #slide .products .product:nth-child(3) {
     display: block;
     width: 40%;
   }
@@ -434,34 +461,34 @@ section.listProduct .icon__left {
   }
 }
 @media (min-width: 1200px) and (max-width: 1366px) {
-  section.listProduct .products {
+  section.listProduct #slide .products {
     padding-top: 60px;
     width: 60%;
     margin: auto;
   }
-  section.listProduct .products .product:nth-child(1) {
+  section.listProduct #slide .products .product:nth-child(1) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(2) {
+  section.listProduct #slide .products .product:nth-child(2) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(3) {
+  section.listProduct #slide .products .product:nth-child(3) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(4) {
+  section.listProduct #slide .products .product:nth-child(4) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(5) {
+  section.listProduct #slide .products .product:nth-child(5) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(6) {
+  section.listProduct #slide .products .product:nth-child(6) {
     display: none;
   }
-  section.listProduct .products .product:nth-child(2) {
+  section.listProduct #slide .products .product:nth-child(2) {
     display: block;
     width: 30%;
   }
-  section.listProduct .products .product:nth-child(3) {
+  section.listProduct #slide .products .product:nth-child(3) {
     display: block;
     width: 30%;
   }
